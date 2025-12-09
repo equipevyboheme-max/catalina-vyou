@@ -294,48 +294,73 @@
         }
 /* Nouvelle section Guylaine V2 */
 
+.enseignante-section {
+  background-color: #f5eee3; /* beige clair */
+  padding: 40px 0;
+}
+
 .enseignante-container {
   display: flex;
-  flex-wrap: nowrap;
-  background-color: #994D0C;
-  padding: 2rem 0;
-}
+  flex-wrap: wrap;
+  background-color: white; /* blanc pour le fond du bloc */
   border-radius: 16px;
-  color: black;
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
   gap: 30px;
 }
 
-
 .enseignante-photo {
-  flex: 1;
+  background-color: #994D0C; /* fond marron autour de la photo */
+  border-radius: 16px;
+  padding: 20px;
   text-align: center;
+  flex: 1;
+  color: white;
 }
+
 .enseignante-photo img {
-  width: 200px;
+  width: 180px;
   height: auto;
   border-radius: 12px;
   margin-bottom: 10px;
 }
 
-
 .enseignante-texte {
   flex: 2;
+  color: #000; /* noir pour le texte */
 }
+
 .enseignante-texte h2 {
-  color: var(--primary-color);
-  margin-top: 0;
+  color: #994D0C;
   font-size: 26px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
-
-.enseignante-texte ul {
-  padding-left: 20px;
+.enseignante-expertise {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
 }
 
-.enseignante-texte li {
+.enseignante-expertise h3 {
+  font-weight: bold;
+  color: #994D0C;
+}
+
+.enseignante-expertise ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.enseignante-expertise li {
   margin-bottom: 6px;
+  padding-left: 1em;
+  text-indent: -1em;
 }
+
 
         /* Testimonials */
         .testimonials {
@@ -654,4 +679,5 @@
         <p>&copy; 2024 Catalina Shiatsu V&You - Tous droits réservés</p>
 
         <p>École de Médecine Traditionnelle Chinoise et Shiatsu - Ardèche</p>
+
 
