@@ -48,11 +48,6 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
 
         .nav-links {
             display: flex;
@@ -476,9 +471,7 @@
     <!-- Header & Navigation -->
     <header>
         <nav>
-            <div class="logo">
-  <img src="images/logo.jpg" alt="Catalina V&You" height="50">
-</div>
+        
 
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
@@ -680,6 +673,33 @@
         <p>&copy; 2024 Catalina Shiatsu V&You - Tous droits réservés</p>
 
         <p>École de Médecine Traditionnelle Chinoise et Shiatsu - Ardèche</p>
+
+<style>
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}
+</style>
 
 
 
