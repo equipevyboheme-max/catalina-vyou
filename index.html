@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalina Shiatsu V&You - École de Shiatsu et Médecine Traditionnelle Chinoise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D4A574;
+            --accent-color: #C85A54;
+            --dark: #2C1810;
+            --light: #F5F0E8;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 24, 16, 0.7)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%238B4513" width="1200" height="600"/><circle cx="200" cy="150" r="100" fill="%23D4A574" opacity="0.3"/><circle cx="1000" cy="400" r="150" fill="%23C85A54" opacity="0.2"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 2rem 100px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 1rem auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            background: var(--primary-color);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Programs Section */
+        .programs {
+            background-color: var(--white);
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .program-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .program-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .program-price {
+            font-size: 2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .program-card ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .program-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .program-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .program-button {
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .program-button:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Guylaine Section */
+        .guylaine {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--light) 100%);
+        }
+
+        .guylaine-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .guylaine-photo {
+            background: var(--primary-color);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .guylaine-bio {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .guylaine-bio p {
+            margin-bottom: 1.5rem;
+        }
+
+        .credentials {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .credentials h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--white);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Webinar Section */
+        .webinar {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .webinar h2 {
+            color: var(--white);
+        }
+
+        .webinar h2::after {
+            background-color: var(--white);
+        }
+
+        .webinar-date {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-content,
+            .guylaine-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+  <img src="images/logo.png" alt="Catalina V&You" height="50">
+</div>
+
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#formations">Formations</a></li>
+                <li><a href="#guylaine">Guylaine</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <h1>Catalina Shiatsu V&You</h1>
+        <p class="hero-subtitle">École de Médecine Traditionnelle Chinoise & Shiatsu</p>
+        <p>Transformez votre vie et votre pratique professionnelle grâce à la sagesse ancestrale du Shiatsu et de la Médecine Traditionnelle Chinoise. Plus de 20 ans d'expérience au service de votre transformation.</p>
+        <a href="#formations" class="cta-button">Découvrir nos Formations</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="about">
+        <h2>Une Approche Authentique et Accessible</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p><strong>Basée en Ardèche</strong>, l'école Catalina Shiatsu V&You représente l'aboutissement de plus de 20 ans de pratique et d'enseignement en Médecine Traditionnelle Chinoise.</p>
+                
+                <p>Notre mission est de rendre accessible cette sagesse ancestrale à tous, en proposant des formations en ligne de qualité professionnelle qui préservent l'authenticité de l'enseignement traditionnel tout en s'adaptant aux réalités modernes.</p>
+                
+                <p>Formée par André Nahum au Centre Shiatsu à Paris, Guylaine transmet une méthode éprouvée qui combine rigueur technique et transformation personnelle profonde.</p>
+            </div>
+            <div class="about-image">
+                <div>
+                    <p>🌿 Plus de 20 ans d'expérience</p>
+                    <p>🎓 Formation certifiée Qualiopi</p>
+                    <p>🌍 Accessible en ligne partout en France</p>
+                    <p>💚 Accompagnement personnalisé</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="formations" class="programs">
+        <h2>Nos Formations</h2>
+        <div class="programs-grid">
+            <!-- Shiatsu Familial -->
+            <div class="program-card">
+                <h3>Shiatsu Familial</h3>
+                <p class="program-price">1 400€</p>
+                <p>Idéal pour prendre soin de vos proches et découvrir les fondamentaux du Shiatsu dans un cadre familial et bienveillant.</p>
+                <ul>
+                    <li>Techniques de base du Shiatsu</li>
+                    <li>Protocoles pour la famille</li>
+                    <li>Soulagement des tensions quotidiennes</li>
+                    <li>Formation 100% en ligne</li>
+                    <li>Accès à vie aux contenus</li>
+                    <li>Accompagnement personnalisé</li>
+                </ul>
+                <a href="#contact" class="program-button">En savoir plus</a>
+            </div>
+
+            <!-- Shiatsu Professionnel -->
+            <div class="program-card">
+                <h3>Shiatsu Professionnel</h3>
+                <p class="program-price">4 500€</p>
+                <p>Formation complète pour devenir praticien certifié en Shiatsu et Médecine Traditionnelle Chinoise. Destinée aux professionnels de santé en reconversion.</p>
+                <ul>
+                    <li>Curriculum complet de MTC</li>
+                    <li>Rhumatologie, dermatologie, pathologies respiratoires</li>
+                    <li>Santé des femmes et méridiens</li>
+                    <li>Points Luo et techniques avancées</li>
+                    <li>Intégration des huiles essentielles</li>
+                    <li>Certification professionnelle</li>
+                    <li>Examens théoriques et pratiques</li>
+                </ul>
+                <a href="#contact" class="program-button">S'inscrire</a>
+            </div>
+
+            <!-- Le Corps du Pouvoir -->
+            <div class="program-card">
+                <h3>Le Corps du Pouvoir</h3>
+                <p class="program-price">8 000€</p>
+                <p>Retraite leadership premium de 8 jours. Une immersion totale combinant Shiatsu et développement du leadership pour dirigeants et entrepreneurs.</p>
+                <ul>
+                    <li>8 jours d'immersion dans une maison de maitre</li>
+                    <li>Techniques Shiatsu pour leaders</li>
+                    <li>Développement du pouvoir personnel</li>
+                    <li>Gestion de l'énergie et du stress</li>
+                    <li>Groupe exclusif limité</li>
+                    <li>Transformation profonde</li>
+                    <li>Hébergement de luxe inclus</li>
+                </ul>
+                <a href="#contact" class="program-button">Réserver votre place</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guylaine Section -->
+    <section id="guylaine" class="guylaine">
+        <h2>Guylaine - Votre Enseignante</h2>
+        <div class="guylaine-content">
+            <div class="guylaine-photo">
+                <div class="guylaine-photo">
+    <img src="images/guylaine.jpg" alt="Guylaine Catalina" height="300">
+    <p>Guylaine Catalina<br>Fondatrice</p>
+</div>
+            <div class="guylaine-bio">
+                <p><strong>Guylaine Catalina</strong> pratique et enseigne la Médecine Traditionnelle Chinoise et le Shiatsu depuis plus de 20 ans. Formée par le maître André Nahum au prestigieux Centre Shiatsu à Paris, elle a développé une approche unique qui allie authenticité traditionnelle et accessibilité moderne.</p>
+                
+                <p>Basée en Ardèche, Guylaine a fait le choix de démocratiser l'accès à cette sagesse ancestrale en créant des formations en ligne de haute qualité, permettant à chacun de se former où qu'il soit en France.</p>
+                
+                <p>Son approche se distingue par sa capacité à intégrer le développement personnel profond avec l'excellence technique. Grâce à sa pratique avancée de la Médecine Traditionnelle Chinoise, elle a développé une remarquable résistance au froid et continue d'explorer les dimensions les plus subtiles de l'énergie.</p>
+
+                <div class="credentials">
+                    <h4>Formation et Expertise</h4>
+                    <ul>
+                        <li>✓ Formée par André Nahum, Centre Shiatsu Paris</li>
+                        <li>✓ Plus de 20 ans d'expérience en pratique et enseignement</li>
+                        <li>✓ Certification Qualiopi pour la qualité des formations</li>
+                        <li>✓ Spécialiste en MTC, rhumatologie, dermatologie</li>
+                        <li>✓ Experte en transformation personnelle et leadership</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="temoignages" class="testimonials">
+        <h2>Ce que disent nos élèves</h2>
+        <div class="testimonial-grid">
+
+<div class="testimonial">
+  <p class="testimonial-text">"Cette semaine, j’ai 4 rendez-vous Shiatsu, je suis tellement contente 🙏  
+  Ce matin, une cliente m’a dit à quel point elle avait ressenti les bienfaits dès la fin de la séance : respiration plus fluide, sensation incroyable…  
+  Elle te connaissait et m’a félicitée. J’étais émue. Merci pour ton enseignement, c’est grâce à toi 🙏"</p>
+  <p class="testimonial-author">- Lucille, élève de dernière année</p>
+</div>
+
+<div class="testimonial">
+  <p class="testimonial-text">"La formation Shiatsu Professionnel a complètement transformé ma pratique d'infirmière. J'ai trouvé une nouvelle voie professionnelle qui me passionne."</p>
+  <p class="testimonial-author">- Marie, infirmière en reconversion</p>
+</div>
+
+<div class="testimonial">
+  <p class="testimonial-text">"L'authenticité de l'enseignement de Guylaine est remarquable. On sent la transmission d'un savoir véritable, pas juste des techniques."</p>
+  <p class="testimonial-author">- Pierre, praticien certifié</p>
+</div>
+
+<div class="testimonial">
+  <p class="testimonial-text">"Le Corps du Pouvoir a été l'expérience la plus transformatrice de ma vie de dirigeant. Je gère mon énergie et mon stress d'une manière totalement nouvelle."</p>
+  <p class="testimonial-author">- Sophie, entrepreneure</p>
+</div>
+</div> <!-- fermeture de testimonial-grid -->
+
+        </div>
+    </section>
+
+    <!-- Webinar CTA -->
+    <section class="webinar">
+        <h2>Webinaire Gratuit : Les 3 Voies du Shiatsu</h2>
+        <p class="webinar-date">Prochain webinaire : 15 Janvier 2026</p>
+        <p>Découvrez comment le Shiatsu peut transformer votre vie personnelle et professionnelle lors de ce webinaire en direct de 90 minutes.</p>
+        <a href="https://guylainejuanvoyage.systeme.io/inscription-claire-a3f0038e-60194458" class="cta-button" style="background-color: var(--white); color: var(--accent-color);" target="_blank">Réserver ma place</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>📍 Localisation</h3>
+                <p>Ardèche, France</p>
+            </div>
+            <div class="contact-item">
+                <h3>📧 Email</h3>
+                <p>equipvy@boheme.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>📱 Réseaux Sociaux</h3>
+                <p><div class="contact-item">
+    <h3>📱 Réseaux Sociaux</h3>
+    <p>
+<div class="contact-item">
+    <h3>📱 Réseaux Sociaux</h3>
+    <p>
+        <a href="https://www.facebook.com/share/17raqNfGjX/" target="_blank">📘 Facebook : Catalina Shiatsu</a><br>
+        <a href="https://www.instagram.com/catalinavandyou?igsh=aHhzeXJseXVsc3N6" target="_blank">📸 Instagram : @catalinavandyou</a><br>
+        <a href="https://www.linkedin.com/in/guylaine-juan-2b85a6388" target="_blank">💼 LinkedIn : Guylaine Juan</a>
+    </p>
+</div>
+
+            <div class="contact-item">
+                <h3>🎓 Certification</h3>
+                <p>Organisme de formation certifié Qualiopi<br>APE: 8559A</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Catalina Shiatsu V&You - Tous droits réservés</p>
+        <p>École de Médecine Traditionnelle Chinoise et Shiatsu - Ardèche</p>
