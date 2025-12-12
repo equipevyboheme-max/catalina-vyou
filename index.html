@@ -719,36 +719,61 @@
 <style>
 /* Responsive pour mobile */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0.5rem 1rem;
-    }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-        margin-top: 0.5rem;
-    }
-
-   .nav-links {
-    flex-direction: row;
-    gap: 0.5rem;
+  nav {
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
     width: 100%;
     margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .ebooks-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .ebook-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .cta-button,
+  .buy-button {
+    width: 90% !important;
+    display: block;
+    margin: 20px auto !important;
+    font-size: 18px !important;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
 }
 
-
-    .hero h1 {
-        font-size: 1.4rem;
-        text-align: center;
-    }
-}
-</style>
-/* Ajustements mobiles supplémentaires */
+/* Ajustements généraux */
 
 h1, h2, h3 {
   font-size: 24px !important;
@@ -761,15 +786,10 @@ p {
   padding: 0 15px;
 }
 
-.cta-button, .buy-button {
-  width: 90% !important;
-  display: block;
-  margin: 20px auto !important;
-  font-size: 18px !important;
-  text-align: center;
-}
-
-.container, .section, .formation-box, .ebook-card {
+.container,
+.section,
+.formation-box,
+.ebook-card {
   width: 100% !important;
   margin: 10px auto;
   box-sizing: border-box;
@@ -781,17 +801,8 @@ img {
   display: block;
   margin: 0 auto;
 }
+</style>
 
-nav {
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-}
-
-.logo {
-  max-width: 100px;
-  height: auto;
-}
 
 
 
