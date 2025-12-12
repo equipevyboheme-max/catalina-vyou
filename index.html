@@ -65,23 +65,26 @@
         .nav-links a:hover {
             color: var(--secondary-color);
         }
-.full-width-btn {
-  width: 100%;
+.full-width-button {
+  display: inline-block;
+  width: 90%;
+  max-width: 1000px;
+  padding: 18px 30px;
   background-color: #9b4e2d;
-  text-align: center;
-  padding: 25px 0;
-  margin: 40px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
   border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 
-.full-width-btn a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 20px;
-  transition: transform 0.2s ease;
-  display: inline-block;
+.full-width-button:hover {
+  background-color: #7e3d21;
+  transform: scale(1.03);
 }
+
 
 .full-width-btn a:hover {
   transform: scale(1.05);
@@ -598,11 +601,12 @@
                 </ul>
                 <a href="#contact" class="program-button">Réserver votre place</a>
             </div>
-  <div style="display: flex; justify-content: center; margin-top: 50px;">
-  <a href="ebooks.html"
-  <div class="full-width-btn">
-  <a href="ebooks.html">📚 Découvrir nos Ebooks</a>
+ <div style="width: 100%; margin-top: 40px; text-align: center;">
+  <a href="ebooks.html" class="full-width-button">
+    📚 Découvrir nos Ebooks
+  </a>
 </div>
+
 
 
 </div>
@@ -744,6 +748,7 @@
     }
 }
 </style>
+
 
 
 
