@@ -65,20 +65,31 @@
         .nav-links a:hover {
             color: var(--secondary-color);
         }
-.btn-ebooks {
-  display: block;
-  width: 300px;
-  margin: 30px auto;
-  padding: 15px 25px;
+.full-width-btn {
+  width: 100%;
   background-color: #9b4e2d;
-  color: white;
   text-align: center;
-  font-weight: bold;
+  padding: 25px 0;
+  margin: 40px 0;
   border-radius: 10px;
-  font-size: 18px;
-  text-decoration: none;
-  transition: transform 0.2s ease;
 }
+
+.full-width-btn a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.full-width-btn a:hover {
+  transform: scale(1.05);
+  background-color: #7e3d21;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
 
 .btn-ebooks:hover {
   background-color: #7e3d21;
@@ -589,8 +600,10 @@
             </div>
   <div style="display: flex; justify-content: center; margin-top: 50px;">
   <a href="ebooks.html"
-   <div style="display: flex; justify-content: center; margin-top: 50px;">
-<a href="ebooks.html" class="btn-ebooks">📚 Découvrir nos Ebooks</a>
+  <div class="full-width-btn">
+  <a href="ebooks.html">📚 Découvrir nos Ebooks</a>
+</div>
+
 
 </div>
 
@@ -731,6 +744,7 @@
     }
 }
 </style>
+
 
 
 
