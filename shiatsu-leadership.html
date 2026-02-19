@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leadership & Énergie – Shiatsu Leadership | Catalina Shiatsu V&You</title>
+
+  <meta name="description" content="Accompagnement Shiatsu pour dirigeants, cadres et avocats : vitalité, clarté mentale, prévention du burn-out. Présentiel en Ardèche ou via Zoom." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --terracotta-1:#4e1e0b;
+      --terracotta-2:#a6401a;
+      --cream:#fbf4ec;
+      --card:#ffffff;
+      --border:#d3c4b6;
+      --text:#2c1a12;
+      --btn:#9b4e2d;
+      --btnHover:#7e3d21;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: Georgia, serif;
+      color:var(--text);
+      background:var(--cream);
+      line-height:1.65;
+    }
+
+    /* HERO */
+    .hero{
+      background: linear-gradient(to bottom right, var(--terracotta-1), var(--terracotta-2));
+      padding: 60px 20px;
+      color: white;
+      text-align:center;
+    }
+    .hero-top{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:18px;
+      margin-bottom:12px;
+      flex-wrap:wrap;
+    }
+    .hero-top img{
+      height:72px;
+      border-radius:50%;
+    }
+    .hero-title{
+      font-family:'Playfair Display', serif;
+      font-size:38px;
+      font-weight:700;
+      margin:0;
+      max-width: 980px;
+    }
+    .hero-sub{
+      max-width:900px;
+      margin: 14px auto 0;
+      font-size:18px;
+      opacity:0.95;
+    }
+
+    /* CONTENT */
+    .container{
+      max-width:1100px;
+      margin: 0 auto;
+      padding: 44px 20px 70px;
+    }
+
+    .section-title{
+      font-family:'Playfair Display', serif;
+      font-size:26px;
+      margin:0 0 14px;
+    }
+
+    .lead{
+      margin:0;
+      font-size:17px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .card{
+      grid-column: span 6;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      padding: 22px;
+    }
+
+    @media (max-width: 900px){
+      .card{ grid-column: span 12; }
+      .hero-title{ font-size:32px; }
+    }
+
+    .card h2{
+      font-family:'Playfair Display', serif;
+      font-size:22px;
+      margin:0 0 12px;
+    }
+
+    .bullets{
+      margin: 12px 0 0;
+      padding-left: 18px;
+      font-size:16px;
+    }
+    .bullets li{ margin: 8px 0; }
+
+    /* CTA */
+    .cta{
+      margin-top: 26px;
+      background: linear-gradient(to bottom right, var(--terracotta-1), var(--terracotta-2));
+      color:#fff;
+      border-radius: 14px;
+      padding: 26px 22px;
+      text-align:center;
+    }
+    .cta h2{
+      font-family:'Playfair Display', serif;
+      margin:0 0 10px;
+      font-size:24px;
+    }
+    .cta p{
+      margin:0 auto;
+      max-width: 900px;
+      font-size:16px;
+      opacity:0.95;
+    }
+    .btn{
+      display:inline-block;
+      margin-top: 16px;
+      padding: 12px 22px;
+      background: var(--btn);
+      color:#fff;
+      text-decoration:none;
+      border-radius: 8px;
+      font-weight:700;
+    }
+    .btn:hover{ background: var(--btnHover); }
+
+    .back{
+      text-align:center;
+      margin-top: 22px;
+      opacity:0.8;
+      font-size:14px;
+    }
+    .back a{ color: inherit; }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-top">
+      <img src="logo.jpg" alt="Logo Catalina V&You">
+      <h1 class="hero-title">Leadership & Énergie : Accompagnement Shiatsu pour Dirigeants, Cadres et Avocats</h1>
+    </div>
+
+    <p class="hero-sub">
+      Dans des fonctions à hautes responsabilités, la clarté mentale et la vitalité physique sont vos premiers outils de travail.
+      Le stress chronique, la charge mentale et les tensions accumulées ne sont pas une fatalité.
+    </p>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="container">
+
+    <section class="grid">
+
+      <!-- Expertise / Solution -->
+      <div class="card">
+        <h2>Votre solution : l’expertise de Guylaine Juan</h2>
+        <p class="lead">
+          Spécialiste en Médecine Traditionnelle Chinoise depuis 20 ans, j’ai conçu un programme de Leadership Shiatsu
+          spécifique pour les professions libérales et les cadres supérieurs.
+        </p>
+
+        <ul class="bullets">
+          <li><strong>Restaurer votre vitalité :</strong> agir sur les points de pression pour libérer les blocages énergétiques.</li>
+          <li><strong>Améliorer la clarté mentale :</strong> apaiser le mental pour une prise de décision plus sereine.</li>
+          <li><strong>Prévenir le burn-out :</strong> apprendre à écouter les signaux d’alerte de votre corps.</li>
+        </ul>
+      </div>
+
+      <!-- Format -->
+      <div class="card">
+        <h2>Le format : flexibilité pour les agendas chargés</h2>
+        <p class="lead">
+          Parce que votre temps est précieux, mon accompagnement s’adapte :
+        </p>
+
+        <ul class="bullets">
+          <li><strong>Séances individuelles en présentiel (Ardèche) :</strong> une immersion pour une déconnexion totale.</li>
+          <li><strong>Consultations et coaching énergétique via Zoom :</strong> des conseils et auto-massages (Do-In) pour maintenir l’équilibre à distance.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Reprenez les commandes de votre énergie.</h2>
+      <p>
+        Contactez-moi à <strong>equipe@vyboheme.com</strong> pour une séance d’essai ou un programme sur mesure.
+      </p>
+      <a class="btn" href="mailto:equipe@vyboheme.com?subject=Demande%20-%20Shiatsu%20Leadership">Envoyer un email</a>
+    </section>
+
+    <div class="back">
+      <a href="index.html">← Retour à l’accueil</a>
+    </div>
+
+  </main>
+
+</body>
+</html>
