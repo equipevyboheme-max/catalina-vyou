@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Boutique – Catalina Shiatsu V&You</title>
 
-  <meta name="description" content="Boutique Shiatsu : sélection des produits essentiels pour le cabinet (table de massage, huiles, coussins, accessoires). Liens d’achat Amazon." />
+  <title>La sélection Guylaine Juan — Boutique</title>
+  <meta name="description" content="La sélection spéciale de Guylaine Juan : produits essentiels pour le cabinet (table de massage, huiles, coussins, accessoires). Liens d’achat Amazon." />
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
@@ -17,11 +17,15 @@
       --card:#ffffff;
       --border:#d3c4b6;
       --text:#2b1b14;
+      --muted: rgba(43,27,20,.80);
       --btn:#9b4e2d;
       --btnHover:#7e3d21;
+      --imgBand:#f3e8dd;
+      --shadow: 0 10px 26px rgba(0,0,0,.10);
     }
 
     *{ box-sizing:border-box; margin:0; padding:0; }
+
     body{
       font-family: Georgia, serif;
       background: var(--bg);
@@ -36,25 +40,33 @@
       padding: 60px 20px;
       text-align:center;
     }
+
     .hero-top{
       display:flex;
       align-items:center;
       justify-content:center;
-      gap:20px;
+      gap:18px;
       margin-bottom:10px;
       flex-wrap:wrap;
     }
+
     .hero-top img{
-      height:80px;
+      height:76px;
+      width:76px;
       border-radius:50%;
+      object-fit:cover;
+      background: rgba(255,255,255,.15);
     }
+
     .hero-top .title{
       font-family:'Playfair Display', serif;
-      font-size:48px;
+      font-size:44px;
       font-weight:700;
+      line-height: 1.1;
     }
+
     .hero p{
-      max-width:800px;
+      max-width:900px;
       margin: 10px auto 0;
       font-size: 18px;
       opacity: .95;
@@ -64,115 +76,132 @@
     .container{
       max-width: 1200px;
       margin: 0 auto;
-      padding: 50px 20px 70px;
+      padding: 46px 20px 70px;
     }
 
     .intro{
       text-align:center;
       max-width: 900px;
-      margin: 0 auto 40px;
+      margin: 0 auto 30px;
       font-size: 18px;
     }
 
-/* ====== GRID BOUTIQUE ====== */
-.grid{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
+    /* ====== GRID BOUTIQUE ====== */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
 
-@media (max-width:1100px){
-  .grid{ grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width:800px){
-  .grid{ grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width:550px){
-  .grid{ grid-template-columns: 1fr; }
-}
+    @media (max-width:1100px){
+      .grid{ grid-template-columns: repeat(3, 1fr); }
+      .hero-top .title{ font-size: 38px; }
+    }
+    @media (max-width:800px){
+      .grid{ grid-template-columns: repeat(2, 1fr); }
+      .hero-top .title{ font-size: 34px; }
+    }
+    @media (max-width:550px){
+      .grid{ grid-template-columns: 1fr; }
+      .hero-top .title{ font-size: 30px; }
+    }
 
-.card{
-  background:#ffffff;
-  border:1px solid #d3c4b6;
-  border-radius:14px;
-  box-shadow:0 6px 14px rgba(0,0,0,0.05);
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
-  transition:0.3s ease;
-}
+    /* ====== CARD ====== */
+    .card{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      transition: .25s ease;
+      min-height: 100%;
+    }
 
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
-}
+    .card:hover{
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
 
-.card-image{
-  width:100%;
-  height:200px;
-  background:#f3e8dd;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:15px;
-}
+    /* Bande / cadre autour de la photo */
+    .card-image{
+      width:100%;
+      padding: 12px;                 /* ✅ la petite bande */
+      background: var(--imgBand);    /* ✅ couleur bande */
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
 
-.card-image img{
-  max-width:100%;
-  max-height:100%;
-  object-fit:contain;
-}
+    .card-image .frame{
+      border: 1px solid rgba(0,0,0,.10);
+      background: #fff;
+      border-radius: 14px;
+      padding: 10px;
+    }
 
-.card-content{
-  padding:16px;
-  display:flex;
-  flex-direction:column;
-  flex:1;
-}
+    .card-image img{
+      width:100%;
+      height: 170px;                 /* ✅ taille uniforme */
+      object-fit: contain;           /* ✅ pas de découpe */
+      display:block;
+      border-radius: 10px;
+      background: #fff;
+    }
 
-.card-content h3{
-  font-family:'Playfair Display', serif;
-  font-size:17px;
-  margin-bottom:8px;
-}
+    .card-content{
+      padding: 16px 16px 14px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
 
-.card-content p{
-  font-size:14px;
-  margin-bottom:14px;
-  line-height:1.4;
-  flex:1;
-}
+    .card-content h3{
+      font-family:'Playfair Display', serif;
+      font-size: 17px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
 
-.buy{
-  display:block;
-  text-align:center;
-  padding:12px;
-  background:#9b4e2d;
-  color:#fff;
-  text-decoration:none;
-  border-radius:10px;
-  font-weight:bold;
-  transition:0.2s ease;
-}
+    .card-content p{
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.45;
+      margin-bottom: 14px;
+      flex:1; /* ✅ pousse le bouton en bas */
+    }
 
-.buy:hover{
-  background:#7e3d21;
-}
+    .buy{
+      display:block;
+      width:100%;
+      text-align:center;
+      padding: 12px 14px;
+      background: var(--btn);
+      color:#fff;
+      text-decoration:none;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: .2s ease;
+    }
 
-    /* footer */
+    .buy:hover{
+      background: var(--btnHover);
+      transform: translateY(-1px);
+    }
+
+    /* Footer note */
     .note{
-      margin-top: 45px;
+      margin-top: 42px;
       background: linear-gradient(to bottom right, var(--terra1), var(--terra2));
       color:#fff;
-      padding: 26px 20px;
-      border-radius: 14px;
+      padding: 22px 18px;
+      border-radius: 16px;
       font-size: 14px;
       max-width: 1100px;
       margin-left:auto;
       margin-right:auto;
+      line-height: 1.6;
     }
-    .note strong{ color:#fff; }
-    .note a{ color:#fff; text-decoration:underline; }
   </style>
 </head>
 
@@ -181,21 +210,23 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-top">
-      <img src="logo.jpg" alt="Logo Catalina V&You">
-      <div class="title">Ma Sélection by Guylaine Juan</div>
+      <img src="logo.jpg" alt="Logo">
+      <div class="title">Ma sélection — Guylaine Juan</div>
     </div>
-    <p>Les outils qui accompagnent ma pratique depuis plus de 20 ans — sélectionnés avec soin pour que chaque séance soit un vrai moment de soin."</p>
+    <p>Les outils qui accompagnent ma pratique depuis plus de 20 ans — sélectionnés avec soin pour que chaque séance soit un vrai moment de soin.</p>
   </section>
 
   <!-- CONTENU -->
   <div class="container">
 
     <div class="intro">
-      <p><strong>Tout le matériel nécessaire pour votre cabinet.</strong> <br>
-      </p>
+      <p><strong>Tout le matériel nécessaire pour votre cabinet.</strong></p>
     </div>
 
     <div class="grid">
+</head>
+
+<body>
 
   <!-- PRODUIT 2 -->
       <div class="card">
