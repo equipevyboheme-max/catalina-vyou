@@ -860,43 +860,46 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Guylaine Juan Ecole de Shiatsu et MTC - Tous droits réservés</p>
+
+        /* ✅ MENU MOBILE : 2–3 LIGNES MAX, COMPACT, PROPRE */
 @media (max-width: 768px){
+
   header{
-    padding: 8px 0 !important;
+    padding: 6px 0 !important;
   }
 
   header nav{
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 12px !important;
-    display: flex !important;
+    padding: 6px 10px !important;
     justify-content: center !important;
-    align-items: center !important;
   }
 
-  header nav ul.nav-links{
+  header nav .nav-links{
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 10px !important;
+
+    gap: 8px 12px !important;        /* (vertical) (horizontal) */
     margin: 0 !important;
     padding: 0 !important;
-    width: 100% !important;
     list-style: none !important;
+    width: 100% !important;
+
+    max-height: 84px !important;      /* ~ 3 lignes */
+    overflow: hidden !important;      /* empêche de prendre tout l’écran */
   }
 
-  header nav ul.nav-links li{
-    display: inline-flex !important;
-  }
-
-  header nav ul.nav-links a{
+  header nav .nav-links a{
     font-size: 13px !important;
+    line-height: 1.1 !important;
     padding: 6px 8px !important;
+    display: inline-block !important;
     white-space: nowrap !important;
   }
 }
+
+
 
 
 
