@@ -519,10 +519,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
 
             h2 {
                 font-size: 2rem;
@@ -864,18 +860,21 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Guylaine Juan Ecole de Shiatsu et MTC - Tous droits réservés</p>
-
-  /* ✅ FORCE MENU HORIZONTAL SUR MOBILE (écrase tout) */
 @media (max-width: 768px){
+  header{
+    padding: 8px 0 !important;
+  }
 
   header nav{
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 12px !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    padding: 10px 12px !important;
   }
 
-  header nav .nav-links{
+  header nav ul.nav-links{
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
@@ -888,17 +887,14 @@
     list-style: none !important;
   }
 
-  header nav .nav-links li{
-    margin: 0 !important;
-    padding: 0 !important;
+  header nav ul.nav-links li{
+    display: inline-flex !important;
   }
 
-  header nav .nav-links a{
+  header nav ul.nav-links a{
     font-size: 13px !important;
-    line-height: 1.2 !important;
     padding: 6px 8px !important;
     white-space: nowrap !important;
-    display: inline-block !important;
   }
 }
 
