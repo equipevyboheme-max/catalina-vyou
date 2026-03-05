@@ -538,6 +538,7 @@
 
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#conference">Conférence</a></li>
                 <li><a href="#apropos">À Propos</a></li>
                 <li><a href="#guylaine">Guylaine</a></li>
                 <li><a href="#formations">Formations</a></li>
@@ -722,7 +723,7 @@
      
    
     <!-- Webinar CTA -->
-    <section class="webinar">
+   <section id="conference" class="webinar">
         <h2>Conférence Gratuite : Les 3 Voies du Shiatsu</h2>
         <p class="webinar-date">Prochaine Conférence : 12 Mars 2026</p>
         <p>Découvrez comment le Shiatsu peut transformer votre vie personnelle et professionnelle lors de cette conférence en direct de 90 minutes.</p>
@@ -873,12 +874,14 @@
     width: 100%;
   }
 
-  .nav-links{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 0;
-  }
+.nav-links{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap: 12px;
+padding: 10px 0;
+}
 
   .nav-links a{
     font-size: 14px;
@@ -908,6 +911,7 @@
     margin: 0 auto;
   }
 }
+
 
 
 
