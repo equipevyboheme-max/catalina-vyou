@@ -26,7 +26,13 @@
             color: var(--dark);
             background-color: var(--light);
         }
-
+<div class="top-banner">
+  <span>🔴 LIVE JEUDI 20H · Burn-out & MTC : identifiez votre profil énergétique · Dernière session · Aucun replay</span>
+  <a href="https://guylainejuanvoyage.systeme.io/inscription-claire-a3f0038e-60194458" class="top-banner-btn" target="_blank">
+    👉 Je m’inscris gratuitement
+  </a>
+</div>
+        
         /* Header & Navigation */
         header {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark) 100%);
@@ -525,7 +531,80 @@
             }
         }
     </style>
+    /* Bandeau LIVE sticky */
+.top-banner{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #b22222;
+  color: #fff;
+  z-index: 2000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.top-banner-btn{
+  display: inline-block;
+  background: #fff;
+  color: #b22222;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.top-banner-btn:hover{
+  background: #f5f0e8;
+}
+
+/* décale le header car le bandeau est au-dessus */
+header{
+  top: 52px;
+}
+
+/* évite que le hero soit caché */
+.hero{
+  padding-top: 210px;
+}
+
+/* mobile */
+@media (max-width:768px){
+
+  .top-banner{
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .top-banner-btn{
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+
+  header{
+    top: 88px;
+  }
+
+  .hero{
+    padding-top: 250px;
+  }
+
+} 
 </head>
+} 
 <body>
     <!-- Header & Navigation -->
     <header>
@@ -890,6 +969,7 @@
 }
 <style>
     
+
 
 
 
