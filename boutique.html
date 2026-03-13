@@ -202,6 +202,78 @@
       margin-right:auto;
       line-height: 1.6;
     }
+/* Navigation catégories boutique */
+.categories-nav{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 40px 0 50px;
+}
+
+.cat-btn{
+  display: inline-block;
+  padding: 12px 20px;
+  background: #8B4513;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.cat-btn:hover{
+  background: #C85A54;
+  transform: translateY(-2px);
+}
+
+/* Séparateurs catégories */
+.category-section{
+  margin-top: 70px;
+  padding-top: 30px;
+  border-top: 2px solid #D4A574;
+  text-align: center;
+}
+
+.category-section h2{
+  color: #8B4513;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.category-section p{
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #2C1810;
+  line-height: 1.7;
+}
+
+/* Scroll fluide */
+html{
+  scroll-behavior: smooth;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .categories-nav{
+    gap: 10px;
+    margin: 30px 0 40px;
+  }
+
+  .cat-btn{
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .category-section h2{
+    font-size: 1.6rem;
+  }
+
+  .category-section p{
+    font-size: 15px;
+    padding: 0 10px;
+   }
+    
   </style>
 </head>
 
@@ -219,9 +291,22 @@
   <!-- CONTENU -->
   <div class="container">
 
-    <div class="intro">
-      <p><strong>Tout le matériel nécessaire pour votre cabinet.</strong></p>
-    </div>
+   <div class="intro">
+  <p><strong>Tout le matériel nécessaire pour votre cabinet.</strong></p>
+</div>
+
+<div class="categories-nav">
+  <a href="#equipement" class="cat-btn"> Équipement du praticien</a>
+  <a href="#outils" class="cat-btn">🧰 Outils de pratique</a>
+  <a href="#bienetre" class="cat-btn">🌿 Bien-être & compléments naturels</a>
+</div>
+
+<section id="equipement" class="category-section">
+  <h2>🪷 Équipement du praticien</h2>
+  <p>Le matériel essentiel pour aménager un cabinet de Shiatsu fonctionnel, professionnel et accueillant.</p>
+</section>
+
+<div class="grid">
 
     <div class="grid">
 </head>
@@ -344,6 +429,15 @@
     <a class="buy" href="https://amzn.to/4rweNTC" target="_blank" rel="noopener noreferrer">Acheter</a>
   </div>
 </div>
+
+      </div>
+
+<section id="outils" class="category-section">
+  <h2>🧰 Outils de pratique</h2>
+  <p>Les accessoires et outils utiles pour accompagner votre pratique au quotidien.</p>
+</section>
+
+<div class="grid">
 
 <!-- PRODUIT 11 -->
 <div class="card">
@@ -500,6 +594,15 @@
     <a class="buy" href="https://amzn.to/4aIPhU1" target="_blank" rel="noopener noreferrer">Acheter</a>
   </div>
 </div>
+
+  </div>
+
+<section id="bienetre" class="category-section">
+  <h2>🌿 Bien-être & compléments naturels</h2>
+  <p>Une sélection de produits naturels pour soutenir l’équilibre, la vitalité et le bien-être.</p>
+</section>
+
+<div class="grid">
 
 <!-- PRODUIT 24 -->
 <div class="card">
