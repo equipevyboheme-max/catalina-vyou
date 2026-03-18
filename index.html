@@ -521,9 +521,63 @@
                 font-size: 2rem;
             }
                }
+html {
+  scroll-behavior: smooth;
+}
+
+.skip-link{
+  position: absolute;
+  top: -60px;
+  left: 10px;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 14px;
+  border: 2px solid #000000;
+  z-index: 3000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip-link:focus{
+  top: 10px;
+}
+        
+        
+        /* ✅ MENU MOBILE SIMPLE : 2 LIGNES */
+@media (max-width: 768px){
+  header{ padding: 8px 0; }
+  nav{ padding: 0 10px; justify-content: center; }
+  header{
+    top: 0;
+}
+
+  body{
+    padding-top: 0;
+}
+  .nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    max-height: 140px; /* ~2 lignes */
+    overflow: hidden;
+  }
+
+  .nav-links a{
+    font-size: 13px;
+    line-height: 1.1;
+    padding: 6px 8px;
+    white-space: nowrap;
+}
+        </style>  
     </style>
 </head>
 <body>
+    <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
     
     <!-- Header & Navigation -->
     <header>
@@ -546,6 +600,7 @@
             </ul>
         </nav>
     </header>
+    <main id="contenu-principal">
 
     <!-- Hero Section -->
     <section id="accueil" class="hero">
@@ -844,46 +899,13 @@
 
   </div>
 </section>
-    
+    </main>
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Guylaine Juan Ecole de Shiatsu et MTC - Tous droits réservés</p>
-
-<style>
-        
-        /* ✅ MENU MOBILE SIMPLE : 2 LIGNES */
-@media (max-width: 768px){
-  header{ padding: 8px 0; }
-  nav{ padding: 0 10px; justify-content: center; }
-  header{
-    top: 0;
-}
-
-  body{
-    padding-top: 0;
-}
-  .nav-links{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 14px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    max-height: 140px; /* ~2 lignes */
-    overflow: hidden;
-  }
-
-  .nav-links a{
-    font-size: 13px;
-    line-height: 1.1;
-    padding: 6px 8px;
-    white-space: nowrap;
-}
-<style>
-    
-
+        </footer>
+</body>
+</html>
 
 
 
