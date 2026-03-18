@@ -47,12 +47,13 @@
             --white: #FFFFFF;
         }
 
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-        }
+    body {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--dark);
+    background-color: var(--light);
+}
         /* Header & Navigation */
         header {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark) 100%);
@@ -573,15 +574,23 @@ html {
     padding: 6px 8px;
     white-space: nowrap;
 }
-        </style>  
+a:focus,
+button:focus,
+summary:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid #C85A54;
+  outline-offset: 3px;
+} 
     </style>
 </head>
 <body>
     <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
     
     <!-- Header & Navigation -->
-    <header>
-        <nav>
+        <header>
+    <nav aria-label="Menu principal">
         
 
             <ul class="nav-links">
@@ -606,9 +615,9 @@ html {
     <section id="accueil" class="hero">
     <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
   <img src="Logoo.png" alt="Logo Catalina V&You" style="height: 80px; border-radius: 50%;">
-  <span style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: bold;">
-    Guylaine Juan - Ecole de Shiatsu et Médecine Tradionnelle Chinoise 
-  </span>
+ <h1 style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: bold; margin: 0;">
+  Guylaine Juan - École de Shiatsu et Médecine Traditionnelle Chinoise
+</h1> 
 </div>
         <p class="hero-subtitle">École de Médecine Traditionnelle Chinoise & Shiatsu</p>
         <p>Transformez votre vie et votre pratique professionnelle grâce à la sagesse ancestrale du Shiatsu et de la Médecine Traditionnelle Chinoise. Plus de 20 ans d'expérience au service de votre transformation.</p>
