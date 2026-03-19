@@ -170,11 +170,45 @@
   box-shadow: 0 12px 25px rgba(155,78,45,0.4);
   background: linear-gradient(135deg, #a95532, #d1774c);
 }
+    .skip-link{
+  position: absolute;
+  left: 10px;
+  top: 0;
+  transform: translateY(-150%);
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 14px;
+  border: 2px solid #000000;
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip-link:focus{
+  transform: translateY(0);
+}
   </style>
 </head>
 
 <body>
-
+  <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
+  <header>
+  <nav aria-label="Menu principal">
+    <ul class="nav-links">
+      <li><a href="index.html#accueil">Accueil</a></li>
+      <li><a href="index.html#apropos">À Propos</a></li>
+      <li><a href="index.html#guylaine">Guylaine</a></li>
+      <li><a href="index.html#formations">Formations</a></li>
+      <li><a href="shiatsu-leadership.html">Leadership</a></li>
+      <li><a href="ebooks.html">Ebooks</a></li>
+      <li><a href="index.html#temoignages">Témoignages</a></li>
+      <li><a href="boutique.html">Boutique</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="contenu-principal">
   <section style="background: linear-gradient(to bottom right, #4e1e0b, #a6401a); padding: 60px 20px; color: white; text-align: center;">
     <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 10px;">
       <img src="logo.jpg" alt="Logo Catalina V&You" style="height: 80px; border-radius: 50%;">
@@ -397,6 +431,6 @@
     Ils s’inscrivent dans une démarche de prévention et d’accompagnement.
   </p>
 </section>
-
+</main>
 </body>
 </html>
