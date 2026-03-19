@@ -22,13 +22,14 @@
     }
 
     *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: Georgia, serif;
-      color:var(--text);
-      background:var(--cream);
-      line-height:1.65;
-    }
+body{
+  margin:0;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color:var(--text);
+  background:var(--cream);
+  line-height:1.7;
+} 
 
     /* HERO */
     .hero{
@@ -200,15 +201,114 @@
     height: 280px;
   }
 }
+
+    html {
+  scroll-behavior: smooth;
+}
+
+.skip-link{
+  position: absolute;
+  left: 10px;
+  top: 0;
+  transform: translateY(-150%);
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 14px;
+  border: 2px solid #000000;
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip-link:focus{
+  transform: translateY(0);
+}
+
+a:focus,
+button:focus,
+summary:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid #C85A54;
+  outline-offset: 3px;
+}
+
+header{
+  background: linear-gradient(135deg, #8B4513 0%, #2C1810 100%);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a{
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover{
+  color: #D4A574;
+}
+
+@media (max-width: 768px){
+  nav{
+    padding: 0 1rem;
+  }
+
+  .nav-links{
+    gap: 0.8rem 1rem;
+  }
+
+  .nav-links a{
+    font-size: 0.95rem;
+  }
+}
+    
   </style>
 </head>
 
 <body>
+  <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
+  <header>
+  <nav aria-label="Menu principal">
+    <ul class="nav-links">
+      <li><a href="index.html#accueil">Accueil</a></li>
+      <li><a href="index.html#apropos">À Propos</a></li>
+      <li><a href="index.html#guylaine">Guylaine</a></li>
+      <li><a href="index.html#formations">Formations</a></li>
+      <li><a href="shiatsu-leadership.html">Leadership</a></li>
+      <li><a href="ebooks.html">Ebooks</a></li>
+      <li><a href="index.html#temoignages">Témoignages</a></li>
+      <li><a href="boutique.html">Boutique</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-top">
-      <img src="logo.jpg" alt="Logo Catalina V&You">
+<img src="logo.jpg" alt="Logo de Guylaine Juan, shiatsu leadership et médecine traditionnelle chinoise">
       <h1 class="hero-title">Leadership & Énergie : Accompagnement Shiatsu pour Dirigeants, Cadres et Avocats</h1>
     </div>
 
@@ -219,7 +319,7 @@
   </section>
 
   <!-- CONTENT -->
-  <main class="container">
+<main id="contenu-principal" class="container">
 
     <section class="grid">
 
@@ -260,17 +360,17 @@
 
   <div class="chateau-grid">
     <figure class="chateau-item">
-      <img src="chateau1.webp" alt="Le château – lieu des stages">
+      <img src="chateau1.webp" alt="Vue du château de Poët-Célard, lieu de l'immersion Shiatsu Leadership">
       <figcaption>Le château</figcaption>
     </figure>
 
     <figure class="chateau-item">
-      <img src="chateau4.webp" alt="Vue panoramique sur les montagnes">
+      <img src="chateau4.webp" alt="Vue panoramique sur les montagnes autour du château de Poët-Célard"">
       <figcaption>Une vue qui apaise</figcaption>
     </figure>
 
     <figure class="chateau-item">
-      <img src="CHATEAU5.webp" alt="Terrasse extérieure du château">
+      <img src="CHATEAU5.webp" alt="Terrasse extérieure du château, utilisée pour les temps d'intégration et de ressourcement">
       <figcaption>Terrasse & temps d’intégration</figcaption>
     </figure>
   </div>
