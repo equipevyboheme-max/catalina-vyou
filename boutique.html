@@ -295,7 +295,25 @@ nav{
   color: #2C1810;
   line-height: 1.7;
 }
+.skip-link{
+  position: absolute;
+  left: 10px;
+  top: 0;
+  transform: translateY(-120%);
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 14px;
+  border: 2px solid #000000;
+  z-index: 3000;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+.skip-link:focus{
+  transform: translateY(0);
+}
+  
+    
 /* Scroll fluide */
 html{
   scroll-behavior: smooth;
@@ -348,24 +366,6 @@ html{
   color: #D4A574;
 }
 
-.skip-link{
-  position: absolute;
-  left: 10px;
-  top: 0;
-  transform: translateY(-120%);
-  background: #ffffff;
-  color: #000000;
-  padding: 10px 14px;
-  border: 2px solid #000000;
-  z-index: 3000;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.skip-link:focus{
-  transform: translateY(0);
-}
-  
   </style>
 </head>
 
