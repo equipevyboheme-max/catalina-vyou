@@ -216,6 +216,18 @@ a:focus, button:focus {
     
     .hero h1 { font-size: 1.8rem; }
 }
+        /* Cache le lien d'évitement visuellement mais le garde pour les lecteurs d'écran */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
     </style>
 </head>
 <body>
