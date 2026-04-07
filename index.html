@@ -212,47 +212,38 @@ a:focus, button:focus {
     border: 0;
 }
 
-/* --- VERSION MOBILE FINALE --- */
+/* --- LE MENU PROPRE --- */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- AJUSTEMENT MOBILE SÉCURISÉ --- */
 @media (max-width: 768px) {
-    /* 1. On affine le menu marron */
-    header {
-        padding: 5px 0 !important;
-    }
-
-    /* 2. Menu sur 3 colonnes sans boutons encombrants */
     .nav-links {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 5px !important;
-        padding: 5px !important;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        text-align: center;
     }
-
-    .nav-links a {
-        background: none !important; 
-        font-size: 0.7rem !important;
-        padding: 5px 2px !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-
-    /* 3. ON DESCEND LE TITRE POUR QU'IL SOIT SOUS LE MENU */
+    .nav-links a { font-size: 0.7rem; }
+    
     .brand-container {
-        flex-direction: column !important;
-        padding: 180px 15px 30px !important; /* L'espace magique de 180px */
-        gap: 15px !important;
+        padding: 160px 15px 30px !important; /* Pour ne pas cacher le titre */
     }
-    
-    .brand-text h2 {
-        font-size: 1.8rem !important;
-        text-align: center;
-        line-height: 1.2 !important;
-    }
-    
-    .brand-text p {
-        font-size: 1.1rem !important;
-        text-align: center;
-        margin: 0 !important;
-    }
+}
 
     .hero { padding: 40px 15px; }
 }
@@ -308,38 +299,38 @@ a:focus, button:focus {
     </div>
 </section>
     <!-- About Section -->
-<section id="approche" style="background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 50px; margin-top: 40px;">
-    
-    <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start;">
+<section id="approche" style="background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 60px 40px; margin-top: 40px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: flex-start;">
         
-        <div style="flex: 1; min-width: 300px; text-align: center;">
-            <img src="images/guylaine.jpg.jpeg" alt="Guylaine Juan" style="width: 100%; max-width: 380px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+        <div style="flex: 1; min-width: 300px; position: relative;">
+            <img src="images/guylaine.jpg.jpeg" alt="Guylaine Juan" style="width: 85%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: block; margin: 0 auto;">
             
-            <div style="margin-top: 30px; text-align: left; background: #FDFBF8; padding: 20px; border-radius: 10px; border-left: 4px solid var(--secondary-color);">
-                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; color: var(--primary-color);">
-                    <li style="margin-bottom: 10px;">✨ <strong>20 ans</strong> d'expérience en MTC</li>
-                    <li style="margin-bottom: 10px;">👤 <strong>5000+</strong> patients accompagnés</li>
-                    <li style="margin-bottom: 10px;">🎓 <strong>Expertise</strong> certifiée en Shiatsu</li>
+            <div style="width: 90%; margin: -40px auto 0; position: relative; z-index: 2; background: var(--primary-color); color: white; padding: 20px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 1.6;">
+                    <li>✨ <strong>20 ans</strong> d'expérience en MTC</li>
+                    <li>👤 <strong>5000+</strong> patients accompagnés</li>
+                    <li>🎓 Diplôme certifié par <strong>Liberlo</strong></li>
+                    <li>📍 Accessible partout en <strong>France et dans le monde</strong></li>
                 </ul>
             </div>
         </div>
 
-        <div style="flex: 1.5; min-width: 300px;">
-            <h2 style="text-align: left; margin-bottom: 25px; font-size: 2.5rem;">Une Approche Authentique</h2>
+        <div style="flex: 1.2; min-width: 300px;">
+            <h2 style="text-align: left; margin-bottom: 20px; font-size: 2.8rem; border: none;">Une Approche Authentique</h2>
             
-            <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-dark);">
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
                 <strong>Le corps n’est pas une machine à réparer. C’est un équilibre à écouter.</strong>
             </p>
             
-            <p style="margin-top: 20px;">
-                Dans ma pratique depuis plus de 20 ans, j’ai observé que les déséquilibres apparaissent bien avant les symptômes visibles. C’est pour cela que le shiatsu agit en prévention.
-            </p>
-            
-            <p style="margin-top: 20px;">
-                Ma mission est de vous transmettre cette lecture du corps, pour que vous puissiez à votre tour accompagner avec justesse et profondeur. Que vous soyez en reconversion ou soignant, je vous aide à développer ce "toucher qui comprend".
+            <p style="margin-bottom: 20px;">
+                Dans ma pratique depuis plus de 20 ans, j’ai observé que les déséquilibres apparaissent bien avant les symptômes visibles. Ma mission est de vous transmettre cette lecture du corps.
             </p>
 
-            <div style="margin-top: 40px;">
+            <p style="margin-bottom: 30px;">
+                Que vous soyez en reconversion ou soignant, je vous aide à développer ce "toucher qui comprend" pour accompagner avec justesse et profondeur.
+            </p>
+
+            <div style="text-align: left;">
                 <a href="#contact" class="cta-button">Découvrir ma méthode</a>
             </div>
         </div>
