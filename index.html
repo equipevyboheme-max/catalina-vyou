@@ -192,12 +192,32 @@ a:focus, button:focus {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
+    /* On force le menu à s'étaler sur plusieurs lignes */
     .nav-links {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
+        display: grid; /* On utilise une grille */
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+        gap: 10px; /* Espace entre les boutons */
+        padding: 10px;
+        justify-items: center;
     }
-    section { padding: 60px 20px; }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem; /* On réduit un peu la taille pour que ça tienne */
+        padding: 8px 4px;
+        display: block;
+        background: rgba(255,255,255,0.1); /* Petit fond discret pour faire "bouton" */
+        border-radius: 5px;
+        white-space: nowrap; /* Évite que le texte saute à la ligne dans le bouton */
+    }
+
+    section { padding: 40px 15px; }
+    
+    .hero h1 { font-size: 1.8rem; }
 }
     </style>
 </head>
