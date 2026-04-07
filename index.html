@@ -233,10 +233,9 @@ a:focus, button:focus {
 /* --- FIX MOBILE DEFINITIF --- */
 @media (max-width: 768px) {
     header {
-        position: fixed;
-        width: 100%;
+        position: absolute !important; /* Il reste en haut et disparaît au scroll */
         top: 0;
-        z-index: 1000;
+        width: 100%;
     }
 
     .nav-links {
