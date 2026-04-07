@@ -6,89 +6,83 @@
     <title>Formation Shiatsu Professionnel - Guylaine Juan</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; color: #4E2A1F; line-height: 1.6; margin: 0; background-color: #FDFBF8; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        body { font-family: 'Montserrat', sans-serif; color: #4E2A1F; line-height: 1.8; margin: 0; background-color: #FDFBF8; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
         
-        /* HERO SECTION - STYLE NOIR & OR (Image 1 Femme Actuelle) */
+        /* HERO LUMINEUX AVEC IMAGE */
         .hero { 
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("château Poêt Célard.jpg") center/cover; 
+            background: linear-gradient(rgba(255, 252, 248, 0.7), rgba(255, 252, 248, 0.7)), url("château Poêt Célard.jpg") center/cover; 
             padding: 120px 20px; 
             text-align: center; 
-            color: #FDFBF8; 
-            background-color: #1A1512; /* Fond de secours noir */
+            border-bottom: 1px solid #EAE0D5;
         }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; color: #D4A373; } /* Titre en Doré */
-        .hero p { font-size: 1.2rem; font-style: italic; max-width: 700px; margin: 20px auto; opacity: 0.9; }
-        
-        /* BOUTONS */
-        .cta-button { display: inline-block; background-color: #CC6B31; color: white; padding: 18px 40px; border-radius: 5px; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; margin-top: 20px; border: none; }
-        .cta-button:hover { background-color: #4E2A1F; transform: translateY(-3px); }
+        .hero h1 { font-size: 2.8rem; color: #4E2A1F; margin-bottom: 20px; line-height: 1.2; font-style: italic; }
+        .hero p { font-size: 1.1rem; color: #5D4037; max-width: 800px; margin: 0 auto; }
 
-        /* SECTION ORANGE (Image 2 Femme Actuelle) */
-        .section-orange { 
+        .cta-button { 
+            display: inline-block; 
             background-color: #CC6B31; 
             color: white; 
-            padding: 80px 20px; 
-            text-align: center; 
-        }
-        .section-orange h2 { color: white; border: none; }
-        .bouton-blanc { 
-            display: inline-block; 
-            background-color: white; 
-            color: #CC6B31; 
-            padding: 18px 40px; 
+            padding: 15px 35px; 
             border-radius: 5px; 
             text-decoration: none; 
             font-weight: bold; 
             text-transform: uppercase; 
-            margin-top: 20px; 
+            margin-top: 30px; 
+            letter-spacing: 1px;
         }
 
-        /* SECTIONS GENERALES */
         section { padding: 80px 20px; }
-        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 40px; color: #4E2A1F; border: none; }
-        
-        /* CARDS */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(212, 163, 115, 0.2); }
-        
-        footer { padding: 40px 20px; background-color: #CC6B31; color: white; text-align: center; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 40px; color: #4E2A1F; }
+
+        /* CARTES D'APPROCHE */
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
+        .card { background: white; padding: 35px; border-radius: 12px; border: 1px solid #EAE0D5; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+        .card h3 { color: #CC6B31; margin-top: 0; font-size: 1.5rem; }
+
+        /* BLOC FORMAT (Noir élégant comme la FAQ) */
+        .format-box { background: #1A1512; color: #FDFBF8; padding: 50px; border-radius: 15px; margin-top: 40px; }
+        .format-box h3 { color: #D4A373; font-size: 1.8rem; }
+
+        /* BLOC ORANGE FINAL */
+        .section-orange { background-color: #CC6B31; color: white; padding: 70px 20px; text-align: center; }
+        .bouton-blanc { display: inline-block; background-color: white; color: #CC6B31; padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: bold; text-transform: uppercase; margin-top: 25px; }
+
+        footer { padding: 40px; text-align: center; background: white; font-size: 0.8rem; opacity: 0.7; }
     </style>
 </head>
 <body>
 
     <header class="hero">
         <div class="container">
-            <h1>Formation Shiatsu Professionnel en France</h1>
-            <h2 style="font-weight: 300; font-size: 1.5rem; color: #FDFBF8;">Guylaine Juan — École de Shiatsu & Médecine Traditionnelle Chinoise</h2>
-            <p>Dans ma pratique depuis plus de 20 ans, j’ai observé une chose : On ne soigne pas un corps en appliquant des techniques. On l’accompagne en comprenant son fonctionnement.</p>
+            <p style="text-transform: uppercase; letter-spacing: 2px; color: #D4A373; font-weight: 600; margin-bottom: 15px;">Guylaine Juan — École de Shiatsu & MTC</p>
+            <h1>"On ne soigne pas un corps en appliquant des techniques. On l’accompagne en comprenant son fonctionnement."</h1>
+            <p>Formation shiatsu professionnel en France<br><strong>Distanciel + immersion en Drôme provençale</strong></p>
             <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com" class="cta-button">Réserver un appel</a>
         </div>
     </header>
 
-    <section style="background-color: white;">
-        <div class="container" style="max-width: 800px; text-align: center;">
-            <h2 class="section-title">Comprendre plutôt que Reproduire</h2>
-            <p style="font-size: 1.1rem; color: #5D4037;">Cette formation ne vous apprend pas à reproduire des gestes. Elle vous apprend à comprendre le corps, l’énergie et les déséquilibres. Dans ma pratique, chaque personne est différente. C’est cette capacité d’adaptation que je vous transmets.</p>
+    <section>
+        <div class="container" style="max-width: 850px; text-align: center;">
+            <h2 class="section-title">Comprendre plutôt que reproduire</h2>
+            <p style="font-size: 1.2rem; font-style: italic; color: #CC6B31; margin-bottom: 30px;">"Cette formation ne vous apprend pas à reproduire des gestes. Elle vous apprend à comprendre le corps, l’énergie et les déséquilibres."</p>
+            <p>Dans ma pratique depuis plus de 20 ans, j’ai observé une chose : chaque personne est différente. C’est cette capacité d’adaptation que je vous transmets.</p>
         </div>
     </section>
 
     <section style="background-color: #F9F6F2;">
         <div class="container">
             <h2 class="section-title">À qui s'adresse cette formation ?</h2>
-            <div class="grid-3">
+            <p style="text-align: center; margin-bottom: 40px;">J’accompagne des personnes qui veulent comprendre le corps en profondeur :</p>
+            <div class="grid-cards">
                 <div class="card">
-                    <h3 style="color: #CC6B31;">Reconversion</h3>
-                    <p>Pour ceux qui souhaitent donner un nouveau sens à leur vie professionnelle par le toucher.</p>
+                    <h3>Reconversion</h3>
+                    <p>Pour ceux qui souhaitent donner un nouveau sens à leur vie professionnelle par une pratique sérieuse.</p>
                 </div>
                 <div class="card">
-                    <h3 style="color: #CC6B31;">Soignants & Thérapeutes</h3>
-                    <p>Pour approfondir vos connaissances et comprendre le corps en profondeur grâce à la MTC.</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: #CC6B31;">Pratique Complète</h3>
-                    <p>Pour toute personne cherchant une approche sérieuse, structurée et authentique.</p>
+                    <h3>Thérapeutes & Soignants</h3>
+                    <p>Pour ceux qui souhaitent comprendre le corps en profondeur et enrichir leur approche actuelle.</p>
                 </div>
             </div>
         </div>
@@ -96,40 +90,46 @@
 
     <section>
         <div class="container">
+            <h2 class="section-title">Ce que vous allez apprendre</h2>
             <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
                 <div style="flex: 1; min-width: 300px;">
-                    <h2 class="section-title" style="text-align: left;">Ce que vous allez apprendre</h2>
-                    <p>Une formation complète basée sur la Médecine Traditionnelle Chinoise :</p>
-                    <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
-                        <li style="margin-bottom: 10px;">✨ <strong>Yin-Yang & 5 Éléments</strong></li>
-                        <li style="margin-bottom: 10px;">✨ <strong>Étude approfondie des Méridiens</strong></li>
-                        <li style="margin-bottom: 10px;">✨ <strong>Diagnostic énergétique (Hara, pouls, observation)</strong></li>
+                    <p>Une formation complète basée sur la médecine traditionnelle chinoise :</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px;">🌿 <strong>Fondamentaux :</strong> Yin-Yang et 5 éléments.</li>
+                        <li style="margin-bottom: 15px;">🌿 <strong>Anatomie Énergétique :</strong> Étude précise des méridiens.</li>
+                        <li style="margin-bottom: 15px;">🌿 <strong>Diagnostic :</strong> Lecture du Hara, pouls et observation.</li>
                     </ul>
                     <p><em>Dans ma pratique, c’est cette lecture du corps qui fait toute la différence.</em></p>
                 </div>
-                <div style="flex: 1; min-width: 300px; background: #1A1512; color: #D4A373; padding: 40px; border-radius: 15px;">
-                    <h3 style="color: white; margin-top: 0;">Format Hybride</h3>
-                    <p style="color: white; opacity: 0.8;"><strong>Distanciel :</strong> Accès aux cours à votre rythme sur plateforme dédiée.</p>
-                    <p style="color: white; opacity: 0.8;"><strong>Immersion :</strong> Deux week-ends en Drôme provençale au Poët-Célard.</p>
-                    <p style="font-style: italic; margin-top: 20px;">"Le corps apprend en pratiquant."</p>
+                <div class="format-box" style="flex: 1; min-width: 300px;">
+                    <h3>Le Format</h3>
+                    <p><strong>🌿 Distanciel :</strong> Accès aux cours à votre rythme.</p>
+                    <p><strong>🌿 Immersion :</strong> Deux week-ends en Drôme provençale. Le corps apprend en pratiquant.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <section style="background-color: white; border-top: 1px solid #EAE0D5;">
+        <div class="container" style="max-width: 800px; text-align: center;">
+            <h2 class="section-title">La Transformation</h2>
+            <p>Mes élèves ne repartent pas avec une technique. Ils repartent avec une compréhension. Parce que le shiatsu transforme autant celui qui pratique que celui qui reçoit.</p>
+        </div>
+    </section>
+
     <section class="section-orange">
-        <div class="container" style="max-width: 800px;">
-            <h2 class="section-title" style="color: white;">Prêt à commencer ?</h2>
-            <p style="font-weight: bold; margin-bottom: 10px;">Je ne prends pas tout le monde. Chaque inscription commence par un échange.</p>
+        <div class="container">
+            <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Prêt à commencer ?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>Je ne prends pas tout le monde.</strong> Chaque inscription commence par un échange.</p>
             <p>Réservez un appel de 45 minutes pour vérifier si cette formation est faite pour vous.</p>
-            <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Demande Appel 45min" class="bouton-blanc">📞 Réserver mon appel (45 min)</a>
+            <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Appel Formation Shiatsu Pro" class="bouton-blanc">Réserver mon appel (45 min)</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 Guylaine Juan – École de Shiatsu et MTC – Tous droits réservés</p>
+        © 2024 Guylaine Juan – École de Shiatsu et MTC – Tous droits réservés
     </footer>
 
 </body>
 </html>
-
+</html>
