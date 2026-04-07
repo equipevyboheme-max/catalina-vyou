@@ -3,389 +3,206 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Leadership & Énergie – Shiatsu Leadership | Catalina Shiatsu V&You</title>
+  <title>Leadership Shiatsu — Le corps du succès | Guylaine Juan</title>
 
-  <meta name="description" content="Accompagnement Shiatsu pour dirigeants, cadres et avocats : vitalité, clarté mentale, prévention du burn-out. Présentiel en Ardèche ou via Zoom." />
-<link rel="canonical" href="https://ecole-shiatsu-guylaine-juan.com/leadership/" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Leadership Shiatsu : Accompagnement premium pour dirigeants et entrepreneurs. Retrouvez votre énergie et votre clarté mentale en Drôme provençale." />
+  <link rel="canonical" href="https://ecole-shiatsu-guylaine-juan.com/leadership/" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --terracotta-1:#4e1e0b;
-      --terracotta-2:#a6401a;
-      --cream:#fbf4ec;
-      --card:#ffffff;
-      --border:#d3c4b6;
-      --text:#2c1a12;
-      --btn:#9b4e2d;
-      --btnHover:#7e3d21;
+    :root {
+      --marron: #4E2A1F;
+      --terracotta: #CC6B31;
+      --dore: #D4A373;
+      --cream: #FDFBF8;
+      --white: #ffffff;
+      --border: #F3EDE7;
     }
 
-    *{ box-sizing:border-box; }
-body{
-  margin:0;
-  font-family: Jost, sans-serif;
-  font-size: 16px;
-  color:var(--text);
-  background:var(--cream);
-  line-height:1.7;
-} 
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: var(--marron);
+      background: var(--cream);
+      line-height: 1.8;
+    }
+
+    /* NAVIGATION */
+    header {
+      background: linear-gradient(135deg, var(--marron) 0%, #2C1810 100%);
+      color: white;
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .nav-links {
+      display: flex; justify-content: center; align-items: center;
+      flex-wrap: wrap; gap: 1.2rem; list-style: none; margin: 0; padding: 0;
+    }
+    .nav-links a { color: white; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--dore); }
 
     /* HERO */
-    .hero{
-      background: linear-gradient(to bottom right, var(--terracotta-1), var(--terracotta-2));
-      padding: 60px 20px;
+    .hero {
+      background: linear-gradient(rgba(78, 42, 31, 0.85), rgba(78, 42, 31, 0.85)), url("/images/chateau1.webp") center/cover;
+      padding: 100px 20px;
       color: white;
-      text-align:center;
+      text-align: center;
     }
-    .hero-top{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:18px;
-      margin-bottom:12px;
-      flex-wrap:wrap;
-    }
-    .hero-top img{
-      height:72px;
-      border-radius:50%;
-    }
-    .hero-title{
-      font-family:'Cormorant Garamond', serif;
-      font-size:38px;
-      font-weight:700;
-      margin:0;
-      max-width: 980px;
-    }
-    .hero-sub{
-      max-width:900px;
-      margin: 14px auto 0;
-      font-size:18px;
-      opacity:0.95;
-    }
+    .hero img { height: 80px; margin-bottom: 20px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 0 0 10px; line-height: 1.2; }
+    .hero .subtitle { font-size: 1.5rem; color: var(--dore); font-style: italic; display: block; margin-bottom: 20px; }
+    .hero p { max-width: 800px; margin: 0 auto 30px; font-size: 1.2rem; }
 
-    /* CONTENT */
-    .container{
-      max-width:1100px;
-      margin: 0 auto;
-      padding: 44px 20px 70px;
-    }
+    /* CONTAINER */
+    .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+    .label { color: var(--terracotta); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 0.85rem; display: block; text-align: center; margin-bottom: 15px; }
+    .section-title { font-family: 'Playfair Display', serif; text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: var(--marron); }
 
-    .section-title{
-      font-family:'Cormorant Garamond', serif;
-      font-size:26px;
-      margin:0 0 14px;
-    }
-
-    .lead{
-      margin:0;
-      font-size:17px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 22px;
-      margin-top: 22px;
-    }
-
-    .card{
-      grid-column: span 6;
-      background: var(--card);
+    /* CARDS */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+    .card {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 15px;
       border: 1px solid var(--border);
-      border-radius: 14px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      text-align: center;
     }
 
-    @media (max-width: 900px){
-      .card{ grid-column: span 12; }
-      .hero-title{ font-size:32px; }
+    /* EXPERIENCE SECTION */
+    .experience-box {
+      background: var(--marron);
+      color: var(--white);
+      padding: 50px;
+      border-radius: 15px;
+      margin: 40px 0;
+    }
+    .experience-box h2 { font-family: 'Playfair Display', serif; color: var(--white); margin-bottom: 20px; }
+    .experience-list { list-style: none; padding: 0; font-size: 1.2rem; }
+    .experience-list li { margin: 15px 0; }
+    .experience-list li::before { content: "🌿"; margin-right: 15px; }
+
+    /* IMAGES CHATEAU */
+    .chateau-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+    .chateau-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; }
+
+    /* CTA / CONVERSION */
+    .cta {
+      background-color: var(--terracotta);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      border-radius: 15px;
+      margin-top: 60px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 18px 45px;
+      background: var(--white);
+      color: var(--terracotta);
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .card h2{
-      font-family:'Cormorant Garamond', serif;
-      font-size:22px;
-      margin:0 0 12px;
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .chateau-grid { grid-template-columns: 1fr; }
     }
-
-    .bullets{
-      margin: 12px 0 0;
-      padding-left: 18px;
-      font-size:16px;
-    }
-    .bullets li{ margin: 8px 0; }
-
-    /* CTA */
-    .cta{
-      margin-top: 26px;
-      background: linear-gradient(to bottom right, var(--terracotta-1), var(--terracotta-2));
-      color:#fff;
-      border-radius: 14px;
-      padding: 26px 22px;
-      text-align:center;
-    }
-    .cta h2{
-      font-family:'Cormorant Garamond', serif;
-      margin:0 0 10px;
-      font-size:24px;
-    }
-    .cta p{
-      margin:0 auto;
-      max-width: 900px;
-      font-size:16px;
-      opacity:0.95;
-    }
-    .btn{
-      display:inline-block;
-      margin-top: 16px;
-      padding: 12px 22px;
-      background: var(--btn);
-      color:#fff;
-      text-decoration:none;
-      border-radius: 8px;
-      font-weight:700;
-    }
-    .btn:hover{ background: var(--btnHover); }
-
-    .back{
-      text-align:center;
-      margin-top: 22px;
-      opacity:0.8;
-      font-size:14px;
-    }
-    .back a{ color: inherit; }
-  /* ===== SECTION CHATEAU ===== */
-
-.chateau-section {
-  max-width: 1200px;
-  margin: 80px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.chateau-section h2 {
-  margin-bottom: 30px;
-}
-
-.chateau-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.chateau-grid img {
-  width: 100%;
-  height: 320px;   /* PLUS GRAND */
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.chateau-grid img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.18);
-}
-
-/* ===== RESPONSIVE MOBILE ===== */
-
-@media (max-width: 900px) {
-  .chateau-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .chateau-grid img {
-    height: 280px;
-  }
-}
-
-    html {
-  scroll-behavior: smooth;
-}
-
-.skip-link{
-  position: absolute;
-  left: 10px;
-  top: 0;
-  transform: translateY(-150%);
-  background: #ffffff;
-  color: #000000;
-  padding: 10px 14px;
-  border: 2px solid #000000;
-  z-index: 9999;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.skip-link:focus{
-  transform: translateY(0);
-}
-
-a:focus,
-button:focus,
-summary:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 3px solid #C85A54;
-  outline-offset: 3px;
-}
-
-header{
-  background: linear-gradient(135deg, #8B4513 0%, #2C1810 100%);
-  color: white;
-  padding: 1rem 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-
-nav{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.nav-links{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a{
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover{
-  color: #D4A574;
-}
-
-@media (max-width: 768px){
-  nav{
-    padding: 0 1rem;
-  }
-
-  .nav-links{
-    gap: 0.8rem 1rem;
-  }
-
-  .nav-links a{
-    font-size: 0.95rem;
-  }
-}
-    
   </style>
 </head>
 
 <body>
-  <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
   <header>
-  <nav aria-label="Menu principal">
-    <ul class="nav-links">
-      <li><a href="/#accueil">Accueil</a></li>
-      <li><a href="/#apropos">À Propos</a></li>
-      <li><a href="/#guylaine">Guylaine</a></li>
-      <li><a href="/#formations">Formations</a></li>
-      <li><a href="/leadership">Leadership</a></li>
-      <li><a href="/ebooks">Ebooks</a></li>
-      <li><a href="/#temoignages">Témoignages</a></li>
-      <li><a href="/boutique">Boutique</a></li>
-      <li><a href="/#contact">Contact</a></li>
-      <li><a href="/#faq">FAQ</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav aria-label="Menu principal">
+      <ul class="nav-links">
+        <li><a href="/#accueil">Accueil</a></li>
+        <li><a href="/#apropos">À Propos</a></li>
+        <li><a href="/#formations">Formations</a></li>
+        <li><a href="/leadership">Leadership</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- HERO -->
   <section class="hero">
-    <div class="hero-top">
-<img src="/images/Logoo.png" alt="Logo de Guylaine Juan, shiatsu leadership et médecine traditionnelle chinoise">
-      <h1 class="hero-title">Leadership & Énergie : Accompagnement Shiatsu pour Dirigeants, Cadres et Avocats</h1>
+    <div class="container">
+      <img src="/images/Logoo.png" alt="Logo Guylaine Juan">
+      <h1>Leadership Shiatsu — Le corps du succès</h1>
+      <span class="subtitle">Guylaine Juan — École de Shiatsu & MTC</span>
+      <p>
+        Une semaine immersive en Drôme provençale.<br>
+        <strong>Le leadership ne vient pas de la tête. Il vient du corps.</strong>
+      </p>
+      <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Candidature - Leadership Shiatsu" class="cta-button" style="display:inline-block; background:var(--terracotta); color:white; padding:18px 40px; text-decoration:none; font-weight:bold; border-radius:4px; text-transform:uppercase;">Candidater</a>
     </div>
-
-    <p class="hero-sub">
-      Dans des fonctions à hautes responsabilités, la clarté mentale et la vitalité physique sont vos premiers outils de travail.
-      Le stress chronique, la charge mentale et les tensions accumulées ne sont pas une fatalité.
-    </p>
   </section>
 
-  <!-- CONTENT -->
-<main id="contenu-principal" class="container">
-
-    <section class="grid">
-
-      <!-- Expertise / Solution -->
-      <div class="card">
-        <h2>Votre solution : l’expertise de Guylaine Juan</h2>
-        <p class="lead">
-          Spécialiste en Médecine Traditionnelle Chinoise depuis 20 ans, j’ai conçu un programme de Leadership Shiatsu
-          spécifique pour les professions libérales et les cadres supérieurs.
-        </p>
-
-        <ul class="bullets">
-          <li><strong>Restaurer votre vitalité :</strong> agir sur les points de pression pour libérer les blocages énergétiques.</li>
-          <li><strong>Améliorer la clarté mentale :</strong> apaiser le mental pour une prise de décision plus sereine.</li>
-          <li><strong>Prévenir le burn-out :</strong> apprendre à écouter les signaux d’alerte de votre corps.</li>
-        </ul>
+  <main class="container">
+    
+    <section>
+      <span class="label">🧠 POSITIONNEMENT</span>
+      <div style="max-width: 850px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
+        <p>Dans mon accompagnement, je rencontre des dirigeants fatigués, lucides mais épuisés.</p>
+        <p>Leur problème n’est pas leur stratégie. <strong>C’est leur énergie.</strong></p>
       </div>
-
-      <!-- Format -->
-      <div class="card">
-        <h2>Le format : flexibilité pour les agendas chargés</h2>
-        <p class="lead">
-          Parce que votre temps est précieux, mon accompagnement s’adapte :
-        </p>
-
-        <ul class="bullets">
-          <li><strong>5 Jours dans le Château de Poët Célard :</strong> une immersion pour une déconnexion totale.</li>
-          <li><strong>Consultations et coaching énergétique via Zoom :</strong> des conseils et auto-massages (Do-In) pour maintenir l’équilibre à distance.</li>
-        </ul>
-      </div>
-
     </section>
-<section class="chateau-section">
-  <h2>Le cadre : un lieu d’exception au château de Poët Célard, en Drôme.</h2>
-  <p class="chateau-subtitle">
-    L'Immersion Shiatsu Leadership : 5 jours pour Renaître : entre nature, silence, profondeur, et une vraie immersion pour se recentrer.
-  </p>
 
-  <div class="chateau-grid">
-    <figure class="chateau-item">
-      <img src="/images/chateau1.webp" alt="Vue du château de Poët-Célard, lieu de l'immersion Shiatsu Leadership">
-      <figcaption>Le château</figcaption>
-    </figure>
+    <section>
+      <span class="label">🎯 POUR QUI</span>
+      <h2 class="section-title">Ce programme est fait pour vous si :</h2>
+      <div class="grid">
+        <div class="card"><p>Vous êtes dirigeant ou entrepreneur</p></div>
+        <div class="card"><p>Vous êtes sous pression constante</p></div>
+        <div class="card"><p>Vous sentez un décalage intérieur</p></div>
+      </div>
+      <p style="text-align: center; margin-top: 30px; font-style: italic; color: var(--terracotta); font-size: 1.2rem;">"Vous avez réussi… mais vous êtes fatigué."</p>
+    </section>
 
-    <figure class="chateau-item">
-      <img src="/images/chateau4.webp" alt="Vue panoramique sur les montagnes autour du château de Poët-Célard"">
-      <figcaption>Une vue qui apaise</figcaption>
-    </figure>
+    <section class="experience-box">
+      <span class="label" style="color: var(--dore); text-align: left;">🌿 L’EXPÉRIENCE</span>
+      <h2>Une semaine immersive au Château de Poët-Célard</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+        <div style="flex: 1; min-width: 280px;">
+          <ul class="experience-list">
+            <li>Travail corporel</li>
+            <li>Respiration</li>
+            <li>Shiatsu</li>
+          </ul>
+          <p style="font-weight: 600; color: var(--dore); margin-top: 20px;">Un retour à l’essentiel.</p>
+        </div>
+        <div style="flex: 1; min-width: 280px; border-left: 1px solid rgba(255,255,255,0.1); padding-left: 30px;">
+          <span class="label" style="color: var(--dore); text-align: left;">🔥 TRANSFORMATION</span>
+          <p>Vous repartez : <strong>plus aligné, plus clair, plus stable.</strong></p>
+          <p>Le corps devient un appui.</p>
+        </div>
+      </div>
+    </section>
 
-    <figure class="chateau-item">
-      <img src="/images/CHATEAU5.webp" alt="Terrasse extérieure du château, utilisée pour les temps d'intégration et de ressourcement">
-      <figcaption>Terrasse & temps d’intégration</figcaption>
-    </figure>
-  </div>
-</section>
-    <!-- CTA -->
+    <section>
+      <div class="chateau-grid">
+        <img src="/images/chateau1.webp" alt="Le château">
+        <img src="/images/chateau4.webp" alt="Une vue qui apaise">
+        <img src="/images/CHATEAU5.webp" alt="Terrasse & intégration">
+      </div>
+    </section>
+
     <section class="cta">
-      <h2>Reprenez les commandes de votre énergie.</h2>
-      <p>
-        Contactez-moi à <strong>equipe@ecole-shiatsu-guylaine-juan.com</strong> pour une séance d’essai.
-      </p>
-      <a class="btn" href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Demande%20-%20Shiatsu%20Leadership">Envoyer un email</a>
+      <span class="label" style="color: white; opacity: 0.8;">📞 CONVERSION</span>
+      <h2 style="font-family:'Playfair Display', serif; font-size: 2.2rem; color: white;">Ce programme est réservé à un nombre limité de participants.</h2>
+      <p style="font-size: 1.1rem;">Réservez un échange pour candidater.</p>
+      <a class="btn" href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Candidature - Leadership Shiatsu">Candidater</a>
     </section>
 
-    <div class="back">
-      <a href="index.html">← Retour à l’accueil</a>
+    <div style="text-align:center; margin-top: 40px; opacity:0.6; font-size:14px;">
+      <a href="/" style="color: var(--marron); text-decoration: none;">← Retour à l’accueil</a>
     </div>
 
   </main>
