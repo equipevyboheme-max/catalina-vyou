@@ -52,13 +52,44 @@ h1, h2, h3, .hero-subtitle {
 }
 
 /* --- NAVIGATION --- */
+/* --- HEADER FIXE EN HAUT --- */
 header {
     background: var(--primary-color);
-    padding: 20px 0;
-    position: sticky;
+    padding: 15px 0;
+    position: absolute; /* Il reste en haut et ne suit pas le défilement */
     top: 0;
+    width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- LE BLANC AVEC LOGO À GAUCHE --- */
+.brand-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px 30px; /* Plus d'espace pour le menu au-dessus */
+    background-color: var(--bg-light);
+}
+
+.brand-text {
+    text-align: left;
+}
+
+.brand-text h2 {
+    font-size: 2.2rem; /* Grand comme demandé */
+    color: var(--primary-color);
+    margin: 0;
+    border: none;
+    line-height: 1;
+}
+
+.brand-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    font-style: italic;
+    margin: 5px 0 0 0;
 }
 
 .nav-links {
@@ -257,15 +288,13 @@ a:focus, button:focus {
     <main id="contenu-principal">
 
     <!-- Hero Section -->
- <section style="text-align: center; padding: 30px 20px 10px; background-color: var(--bg-light);">
-    <img src="images/Logoo.png" alt="Logo École" style="width: 80px; height: auto; margin-bottom: 10px;">
-    <h2 style="color: var(--primary-color); font-size: 1.4rem; font-family: 'Jost', sans-serif; letter-spacing: 1px; text-transform: uppercase; border: none; margin-bottom: 0;">
-        Guylaine Juan
-    </h2>
-    <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--secondary-color); font-style: italic;">
-        École de Shiatsu & Médecine Traditionnelle Chinoise
-    </p>
-</section>
+<div class="brand-container">
+    <img src="images/logoO.png" alt="Logo École" style="width: 120px; height: auto;">
+    <div class="brand-text">
+        <h2>Guylaine Juan</h2>
+        <p>École de Shiatsu & Médecine Traditionnelle Chinoise</p>
+    </div>
+</div>
 
 <section class="hero" id="accueil">
     <div style="max-width: 800px; margin: 0 auto;">
