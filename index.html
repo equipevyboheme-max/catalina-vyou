@@ -63,33 +63,51 @@ header {
 }
 
 /* --- LE BLANC AVEC LOGO À GAUCHE --- */
+/* --- LE BLANC AVEC LOGO ET TITRE --- */
 .brand-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 60px 20px 30px; /* Plus d'espace pour le menu au-dessus */
+    justify-content: center; /* Centre tout le bloc au milieu de la page */
+    gap: 40px; /* Espace généreux entre logo et texte */
+    padding: 120px 20px 40px; /* 120px en haut pour laisser la place au menu marron */
     background-color: var(--bg-light);
 }
 
-.brand-text {
-    text-align: left;
-}
-
 .brand-text h2 {
-    font-size: 2.2rem; /* Grand comme demandé */
+    font-size: 3.5rem; /* Ton nom en très grand et classe */
     color: var(--primary-color);
     margin: 0;
     border: none;
-    line-height: 1;
+    line-height: 1.1;
+    font-weight: 700;
+    text-transform: none; /* Garde la casse naturelle */
 }
 
 .brand-text p {
     font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
+    font-size: 1.6rem; /* Sous-titre bien lisible */
     color: var(--secondary-color);
     font-style: italic;
-    margin: 5px 0 0 0;
+    margin-top: 5px;
+}
+
+/* --- AJUSTEMENT POUR MOBILE --- */
+@media (max-width: 768px) {
+    .brand-container {
+        flex-direction: column; /* Logo au-dessus du texte sur téléphone */
+        padding: 140px 15px 30px; /* Encore plus d'espace en haut sur mobile */
+        gap: 15px;
+    }
+    
+    .brand-text h2 {
+        font-size: 2rem; /* Taille adaptée au petit écran */
+        text-align: center;
+    }
+    
+    .brand-text p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
 }
 
 .nav-links {
