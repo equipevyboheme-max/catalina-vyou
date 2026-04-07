@@ -84,12 +84,12 @@ header {
 }
 
 /* --- HERO SECTION --- */
+/* --- HERO SECTION RÉDUITE --- */
 .hero {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 120px 20px;
+    padding: 50px 20px; /* Réduit drastiquement l'épaisseur */
     text-align: center;
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,26 +97,23 @@ header {
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem); /* S'adapte à la taille de l'écran */
-    color: var(--white);
-    margin-bottom: 20px;
-    max-width: 900px;
-    line-height: 1.2;
+    display: none; /* On cache le h1 ici car il est déjà présent dans le bloc blanc au-dessus */
 }
 
 .hero-subtitle {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
-    color: var(--secondary-color); /* Texte ocre comme demandé */
+    color: var(--secondary-color);
     font-style: italic;
-    margin-bottom: 30px;
+    margin-bottom: 15px; /* Espace réduit */
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     max-width: 750px;
     color: var(--white);
     opacity: 0.95;
-    margin-bottom: 40px;
+    margin-bottom: 25px; /* Espace réduit */
+    line-height: 1.6;
 }
 
 /* --- BOUTONS --- */
