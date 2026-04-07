@@ -10,24 +10,49 @@
         h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
-        /* HERO SECTION */
-        .hero { background: linear-gradient(rgba(26, 21, 18, 0.6), rgba(26, 21, 18, 0.6)), url("château poêt Célard.jpg") center/cover; padding: 120px 20px; text-align: center; color: #FDFBF8; }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        /* HERO SECTION - STYLE NOIR & OR (Image 1 Femme Actuelle) */
+        .hero { 
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("chateau.jpg") center/cover; 
+            padding: 120px 20px; 
+            text-align: center; 
+            color: #FDFBF8; 
+            background-color: #1A1512; /* Fond de secours noir */
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; color: #D4A373; } /* Titre en Doré */
         .hero p { font-size: 1.2rem; font-style: italic; max-width: 700px; margin: 20px auto; opacity: 0.9; }
         
         /* BOUTONS */
-        .cta-button { display: inline-block; background-color: #CC6B31; color: white; padding: 18px 40px; border-radius: 5px; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; margin-top: 20px; }
+        .cta-button { display: inline-block; background-color: #CC6B31; color: white; padding: 18px 40px; border-radius: 5px; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; margin-top: 20px; border: none; }
         .cta-button:hover { background-color: #4E2A1F; transform: translateY(-3px); }
+
+        /* SECTION ORANGE (Image 2 Femme Actuelle) */
+        .section-orange { 
+            background-color: #CC6B31; 
+            color: white; 
+            padding: 80px 20px; 
+            text-align: center; 
+        }
+        .section-orange h2 { color: white; border: none; }
+        .bouton-blanc { 
+            display: inline-block; 
+            background-color: white; 
+            color: #CC6B31; 
+            padding: 18px 40px; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            margin-top: 20px; 
+        }
 
         /* SECTIONS GENERALES */
         section { padding: 80px 20px; }
-        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 40px; color: #4E2A1F; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 40px; color: #4E2A1F; border: none; }
         
-        /* CARDS & BLOCS */
+        /* CARDS */
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(212, 163, 115, 0.1); }
+        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(212, 163, 115, 0.2); }
         
-        /* FOOTER */
         footer { padding: 40px 20px; background-color: #CC6B31; color: white; text-align: center; }
     </style>
 </head>
@@ -36,7 +61,7 @@
     <header class="hero">
         <div class="container">
             <h1>Formation Shiatsu Professionnel en France</h1>
-            <h2 style="font-weight: 300; font-size: 1.5rem;">Guylaine Juan — École de Shiatsu & Médecine Traditionnelle Chinoise</h2>
+            <h2 style="font-weight: 300; font-size: 1.5rem; color: #FDFBF8;">Guylaine Juan — École de Shiatsu & Médecine Traditionnelle Chinoise</h2>
             <p>Dans ma pratique depuis plus de 20 ans, j’ai observé une chose : On ne soigne pas un corps en appliquant des techniques. On l’accompagne en comprenant son fonctionnement.</p>
             <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com" class="cta-button">Réserver un appel</a>
         </div>
@@ -54,15 +79,15 @@
             <h2 class="section-title">À qui s'adresse cette formation ?</h2>
             <div class="grid-3">
                 <div class="card">
-                    <h3>Reconversion</h3>
+                    <h3 style="color: #CC6B31;">Reconversion</h3>
                     <p>Pour ceux qui souhaitent donner un nouveau sens à leur vie professionnelle par le toucher.</p>
                 </div>
                 <div class="card">
-                    <h3>Soignants & Thérapeutes</h3>
+                    <h3 style="color: #CC6B31;">Soignants & Thérapeutes</h3>
                     <p>Pour approfondir vos connaissances et comprendre le corps en profondeur grâce à la MTC.</p>
                 </div>
                 <div class="card">
-                    <h3>Pratique Complète</h3>
+                    <h3 style="color: #CC6B31;">Pratique Complète</h3>
                     <p>Pour toute personne cherchant une approche sérieuse, structurée et authentique.</p>
                 </div>
             </div>
@@ -92,12 +117,12 @@
         </div>
     </section>
 
-    <section style="background-color: #FDFBF8; text-align: center; border-top: 1px solid #D4A373;">
-        <div class="container" style="max-width: 700px;">
-            <h2 class="section-title">Prêt à commencer ?</h2>
+    <section class="section-orange">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title" style="color: white;">Prêt à commencer ?</h2>
             <p style="font-weight: bold; margin-bottom: 10px;">Je ne prends pas tout le monde. Chaque inscription commence par un échange.</p>
             <p>Réservez un appel de 45 minutes pour vérifier si cette formation est faite pour vous.</p>
-            <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Demande Appel 45min" class="cta-button" style="background-color: #4E2A1F;">📞 Réserver mon appel (45 min)</a>
+            <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Demande Appel 45min" class="bouton-blanc">📞 Réserver mon appel (45 min)</a>
         </div>
     </section>
 
