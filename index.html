@@ -258,6 +258,53 @@ a:focus, button:focus {
 }
     .hero { padding: 40px 15px; } 
 }
+
+.teaser-media-bar {
+    background: linear-gradient(90deg, #4E2A1F 0%, #CC6B31 100%);
+    color: #FDFBF8;
+    padding: 12px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--dore);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.teaser-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.teaser-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.teaser-icon {
+    font-size: 1.2rem;
+}
+
+/* Animation pour l'apparition douce */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Optimisation Mobile */
+@media (max-width: 600px) {
+    .teaser-content {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .teaser-content p {
+        font-size: 0.85rem;
+    }
+}
+
         
     </style>
 </head>
@@ -284,6 +331,15 @@ a:focus, button:focus {
 
             </ul>
         </nav>  
+
+<!-- BANDEAU TEASER MÉDIA -->
+<div class="teaser-media-bar">
+    <div class="teaser-content">
+        <span class="teaser-icon">🌐</span>
+        <p><strong>Quelque chose se prépare…</strong> Un média national m'a contactée pour une expertise Shiatsu. Annonce très prochainement !</p>
+    </div>
+</div>
+            
     </header>
 
     <main id="contenu-principal">
