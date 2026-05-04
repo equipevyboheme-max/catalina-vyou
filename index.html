@@ -258,51 +258,42 @@ a:focus, button:focus {
 }
     .hero { padding: 40px 15px; } 
 }
-
+        /* BANDEAU TEASER - VERSION FLASHY ORANGE */
 .teaser-media-bar {
-    background: linear-gradient(90deg, #4E2A1F 0%, #CC6B31 100%);
-    color: #FDFBF8;
-    padding: 12px 20px;
+    background-color: #CC6B31 !important; /* Le orange de ton bas de page */
+    color: #FFFFFF !important; /* Texte blanc pour un contraste max */
+    padding: 15px 20px;
     text-align: center;
-    border-bottom: 2px solid var(--dore);
-    animation: fadeInDown 0.8s ease-out;
+    font-weight: 500;
+    box-shadow: inset 0 -2px 5px rgba(0,0,0,0.1);
 }
 
 .teaser-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    max-width: 900px;
+    gap: 12px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .teaser-content p {
     margin: 0;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    line-height: 1.4;
+    font-size: 1rem;
+    color: #FFFFFF !important;
 }
 
 .teaser-icon {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
-/* Animation pour l'apparition douce */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Optimisation Mobile */
+/* Optimisation Mobile pour que ce soit fluide */
 @media (max-width: 600px) {
-    .teaser-content {
-        flex-direction: column;
-        gap: 5px;
-    }
-    .teaser-content p {
-        font-size: 0.85rem;
-    }
+    .teaser-media-bar { padding: 10px; }
+    .teaser-content p { font-size: 0.9rem; }
+}
+
+
 }
 
         
@@ -335,7 +326,7 @@ a:focus, button:focus {
 <!-- BANDEAU TEASER MÉDIA -->
 <div class="teaser-media-bar">
     <div class="teaser-content">
-        <span class="teaser-icon">🌐</span>
+        <span class="teaser-icon">📢</span>
         <p><strong>Quelque chose se prépare…</strong> Un média national m'a contactée pour une expertise Shiatsu. Annonce très prochainement !</p>
     </div>
 </div>
