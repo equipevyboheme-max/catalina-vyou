@@ -229,6 +229,32 @@ a:focus, button:focus {
     letter-spacing: 1px;
 }
 
+/* Cache le texte mais le garde pour les malvoyants */
+.skip-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Le lien redevient visible si on utilise la touche TAB (navigation clavier) */
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: #CC6B31;
+    color: white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+        
 /* --- FIX MOBILE : EMPILEMENT NATUREL (Menu > Bandeau > Logo) --- */
 @media (max-width: 768px) {
     header {
