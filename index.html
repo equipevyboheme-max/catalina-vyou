@@ -229,28 +229,28 @@ a:focus, button:focus {
     letter-spacing: 1px;
 }
 
-/* --- FIX MOBILE DEFINITIF --- */
+/* --- FIX MOBILE : EMPILEMENT NATUREL (Menu > Bandeau > Logo) --- */
 @media (max-width: 768px) {
     header {
-        position: absolute !important; 
-        top: 0;
+        position: relative !important; /* On annule le 'absolute' qui faisait tout bugger */
         width: 100%;
-        z-index: 10;
-    }
-
-    /* ICI : On pousse le bandeau vers le bas pour qu'il apparaisse SOUS le menu */
-    .teaser-media-bar {
-        margin-top: 180px !important; 
+        background-color: #4A2B1F;
     }
 
     .nav-links {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 5px;
-        padding: 5px;
+        padding: 10px 5px;
     }
 
-    /* On réduit le padding-top du brand-container car le bandeau prend déjà de la place */
+    /* Le bandeau orange se place automatiquement SOUS le menu */
+    .teaser-media-bar {
+        margin-top: 0 !important;
+        padding: 10px 15px !important;
+    }
+
+    /* Le logo se place automatiquement SOUS le bandeau */
     .brand-container {
         padding-top: 20px !important; 
         flex-direction: column !important;
@@ -258,8 +258,12 @@ a:focus, button:focus {
     }
     
     .brand-text h2 {
-        font-size: 1.8rem !important;
+        font-size: 1.6rem !important;
         text-align: center !important;
+    }
+
+    .teaser-content p {
+        font-size: 0.75rem !important;
     }
 }
 
@@ -270,34 +274,18 @@ a:focus, button:focus {
     padding: 15px 20px;
     text-align: center;
     font-weight: 500;
-    box-shadow: inset 0 -2px 5px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 5;
 }
 
 .teaser-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    max-width: 1000px;
-    margin: 0 auto;
+    gap: 10px;
 }
 
 .teaser-content p {
     margin: 0;
-    font-size: 1rem;
     color: #FFFFFF !important;
-}
-
-.teaser-icon {
-    font-size: 1.3rem;
-}
-
-/* Optimisation pour les tout petits écrans */
-@media (max-width: 600px) {
-    .teaser-media-bar { padding: 10px; }
-    .teaser-content p { font-size: 0.8rem !important; }
 }
         
     </style>
