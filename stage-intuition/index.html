@@ -267,6 +267,38 @@
       .section-content, .cta-section { padding: 50px 16px; }
       .day-block, .info-box { padding: 20px; }
     }
+/* ... tes anciens styles existants ... */
+
+    /* Style de la galerie photo - POUR DOMPTER LES IMAGES ÉNORMES */
+    .chateau-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px;
+      margin-top: 20px;
+      margin-bottom: 24px;
+    }
+
+    .chateau-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    /* Optimisation pour Mobile */
+    @media (max-width: 768px) {
+      .chateau-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      .chateau-img {
+        height: 250px;
+      }
+    }
+</style>
+    
+    
   </style>
 </head>
 <body>
