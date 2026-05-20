@@ -267,55 +267,51 @@
       .section-content, .cta-section { padding: 50px 16px; }
       .day-block, .info-box { padding: 20px; }
     }
-/* --- CORRECTION DE LA GALERIE POUR ORDI (Plus large, format paysage) --- */
+/* --- CORRECTION DE LA GALERIE POUR ORDI ET MOBILE --- */
     .chateau-gallery {
       display: grid;
-      /* On s'assure que la galerie prend toute la largeur du container */
       width: 100%; 
-      /* Toujours 3 colonnes de taille égale */
       grid-template-columns: repeat(3, 1fr); 
-      gap: 30px; /* Un peu plus d'espace pour respirer */
+      gap: 30px; 
       margin-top: 30px;
       margin-bottom: 30px;
     }
 
     .chateau-img {
       display: block;
-      width: 100%; /* La photo occupe toute sa colonne */
-      
-      /* --- LA CORRECTION EST ICI --- */
-      /* Au lieu d'une hauteur fixe (300px), on utilise un ratio d'image */
-      /* 66% donne un format paysage (comme tes originaux) bien visible */
+      width: 100%;
       height: 0;
-      padding-bottom: 66%; 
+      padding-bottom: 66.66%; 
       position: relative;
-      /* ----------------------------- */
-
-      border-radius: 6px; /* Des coins un peu plus doux */
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Une ombre plus élégante */
-      overflow: hidden; /* Obligatoire pour le ratio */
+      border-radius: 6px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      overflow: hidden;
     }
 
-    /* On applique object-fit sur l'image elle-même à l'intérieur du container */
     .chateau-img img {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover; /* On garde object-fit pour s'assurer que l'image remplit tout */
+      object-fit: cover; 
+      opacity: 0; 
+      transition: opacity 0.5s ease-out;
+    }
+
+    .chateau-img img[src] {
+        opacity: 1;
     }
 
     /* --- Optimisation pour Mobile --- */
     @media (max-width: 768px) {
       .chateau-gallery {
-        grid-template-columns: 1fr; /* Une seule photo par ligne */
+        grid-template-columns: 1fr; 
         gap: 20px;
       }
       .chateau-img {
-        padding-bottom: 75%; /* Un format un peu plus carré pour téléphone */
+        padding-bottom: 75%; 
       }
-    }
     }
 </style>
     
