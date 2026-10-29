@@ -713,6 +713,36 @@ section { padding: 88px 0; }
     .footer-grid { grid-template-columns: 1fr; gap: 30px; }
 }
 
+/* =========================================================
+   ORDINATEUR : identité de l'école plus présente, bandeau plus court
+   ========================================================= */
+@media (min-width: 961px) {
+    .container { max-width: 1200px; }
+
+    .header-top { padding-top: 18px; padding-bottom: 0; }
+    .header-logo img { width: 88px; height: 88px; }
+
+    .identity { padding: 6px 24px 34px; }
+    .hero .eyebrow { font-size: 0.85rem; }
+    .identity-name { font-size: clamp(3.2rem, 4.8vw, 4.4rem); }
+    .identity-school {
+        font-size: 1rem;
+        letter-spacing: 0.32em;
+        margin-top: 16px;
+    }
+
+    .hero { padding: 64px 0 70px; }
+    .hero-inner { max-width: 720px; }
+    .hero-title {
+        font-size: clamp(2.2rem, 3.2vw, 2.8rem);
+        white-space: nowrap;
+        margin: 14px 0 18px;
+    }
+    .hero-actions { margin-top: 28px; }
+    .hero-press { margin-top: 34px; }
+    .hero-ornament { width: 440px; height: 440px; right: -80px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
 }
@@ -819,7 +849,7 @@ section { padding: 88px 0; }
 
             <div class="container">
                 <div class="hero-inner">
-                    <p class="eyebrow">Formation · Transmission · Pratique</p>
+                    <p class="eyebrow">Formation professionnelle en Shiatsu &amp; MTC</p>
                     <p class="hero-title" id="hero-titre">Le Bilan <em>avant</em> le Geste</p>
                     <p class="hero-lead">
                         Apprendre à observer, comprendre et adapter sa pratique.
