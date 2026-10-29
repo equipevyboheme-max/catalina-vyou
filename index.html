@@ -516,13 +516,14 @@ section { padding: 88px 0; }
 .temoignages { background: var(--sable); }
 .temoignages-intro { text-align: center; color: var(--texte-doux); margin: 18px auto 48px; max-width: 560px; }
 
-.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.quotes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 1080px) { .quotes { grid-template-columns: repeat(2, 1fr); } }
 
 .quote-card {
     background: var(--blanc);
     border: 1px solid var(--ligne);
     border-radius: 6px;
-    padding: 34px 30px 28px;
+    padding: 32px 26px 26px;
     display: flex;
     flex-direction: column;
 }
@@ -535,6 +536,8 @@ section { padding: 88px 0; }
     margin-bottom: 18px;
 }
 .quote-card blockquote { font-size: 0.98rem; color: var(--texte); flex-grow: 1; }
+
+
 .quote-card figcaption { margin-top: 22px; font-size: 0.88rem; color: var(--texte-doux); }
 .quote-card figcaption strong { color: var(--brun); font-weight: 500; }
 
@@ -687,7 +690,7 @@ section { padding: 88px 0; }
     /* Mise en page des sections */
     section { padding: 64px 0; }
     .formations-head { grid-template-columns: 1fr; gap: 18px; margin-bottom: 32px; }
-    .cards, .quotes { grid-template-columns: 1fr; }
+    .cards { grid-template-columns: 1fr; }
     .stages-grid { grid-template-columns: 1fr; }
     .methode-grid { grid-template-columns: 1fr; gap: 32px; }
     .portrait { max-width: 320px; }
@@ -710,6 +713,7 @@ section { padding: 88px 0; }
     .featured-body { padding: 26px 22px; }
     .card { padding: 28px 24px; }
     .keypoints { grid-template-columns: 1fr; }
+    .quotes { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; gap: 30px; }
 }
 
@@ -1013,6 +1017,11 @@ section { padding: 88px 0; }
                 <p class="temoignages-intro">Les mots de nos élèves et praticiens formés à l'école.</p>
 
                 <div class="quotes">
+                    <figure class="quote-card">
+                        <blockquote>Son enseignement est complet, structuré et d'une grande richesse. Guylaine transmet avec précision, ce qui permet d'acquérir des bases solides et une vraie compréhension de la pratique. Je recommande sans hésitation.</blockquote>
+                        <figcaption><strong>Sandrine</strong> — praticienne en cabinet, après une reconversion</figcaption>
+                    </figure>
+
                     <figure class="quote-card">
                         <blockquote>Cette semaine, j'ai 4 rendez-vous Shiatsu, je suis tellement contente. Une cliente m'a dit à quel point elle avait ressenti les bienfaits dès la fin de la séance… Merci pour ton enseignement, c'est grâce à toi.</blockquote>
                         <figcaption><strong>Lucile</strong> — élève de dernière année</figcaption>
