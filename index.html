@@ -719,11 +719,19 @@ section { padding: 88px 0; }
 @media (min-width: 961px) {
     .container { max-width: 1200px; }
 
-    .header-top { padding-top: 18px; padding-bottom: 0; }
-    .header-logo img { width: 88px; height: 88px; }
+    .header-top { padding-top: 18px; padding-bottom: 0; align-items: flex-start; }
+    .main-nav { margin-top: 18px; }
+    /* Logo plus grand et un peu plus bas, à hauteur du nom */
+    .header-logo { margin-top: 22px; position: relative; z-index: 1; }
+    .header-logo img { width: 128px; height: 128px; }
 
-    .identity { padding: 6px 24px 34px; }
-    .hero .eyebrow { font-size: 0.85rem; }
+    /* Le nom remonte à côté du logo pour ne pas allonger l'en-tête */
+    .identity { padding: 0 24px 34px; margin-top: -44px; }
+    .hero .eyebrow {
+        font-size: 1.05rem;
+        letter-spacing: 0.22em;
+        font-weight: 600;
+    }
     .identity-name { font-size: clamp(3.2rem, 4.8vw, 4.4rem); }
     .identity-school {
         font-size: 1rem;
@@ -743,6 +751,13 @@ section { padding: 88px 0; }
     .hero-ornament { width: 440px; height: 440px; right: -80px; }
 }
 
+/* Petits écrans d'ordinateur : logo un peu réduit pour ne pas toucher le titre */
+@media (min-width: 961px) and (max-width: 1240px) {
+    .header-logo img { width: 104px; height: 104px; }
+    .identity { margin-top: -20px; }
+    .identity-school { font-size: 0.85rem; letter-spacing: 0.22em; }
+}
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
 }
@@ -755,7 +770,7 @@ section { padding: 88px 0; }
     <header class="site-header">
         <div class="container header-top">
             <a href="/" class="header-logo" aria-label="Accueil - École de Shiatsu Guylaine Juan">
-                <img src="/images/logo-ecole.png" alt="Logo de l'École de Shiatsu Guylaine Juan" width="64" height="64">
+                <img src="/images/logo-ecole.png" alt="Logo de l'École de Shiatsu Guylaine Juan" width="128" height="128">
             </a>
 
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
