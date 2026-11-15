@@ -198,6 +198,18 @@ section { padding: 88px 0; }
 .btn-contour:hover { background: rgba(253, 251, 248, 0.1); border-color: var(--ivoire); }
 
 .arrow::after { content: "→"; font-family: var(--sans); }
+/* Prise de contact : agenda Calendly + appel / SMS */
+.contact-line { margin-top: 16px; font-size: 0.92rem; color: rgba(253, 251, 248, 0.85); }
+.contact-line a { color: var(--dore); text-decoration: none; font-weight: 500; white-space: nowrap; }
+.contact-line a:hover { text-decoration: underline; }
+.contact-line.on-light { color: var(--texte-doux); }
+.contact-line.on-light a { color: var(--brun); }
+.btn-contour-brun { border-color: var(--brun); color: var(--brun); }
+.btn-contour-brun:hover { background: var(--brun); color: var(--blanc); }
+.drawer-cta .btn + .btn { margin-top: 10px; }
+.drawer-cta .contact-line { margin-top: 12px; text-align: center; }
+.inline-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 8px; }
+
 
 .text-link {
     display: inline-flex;
@@ -1162,7 +1174,9 @@ section { padding: 88px 0; }
                 </ul>
 
                 <div class="drawer-cta">
-                    <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Réserver un appel - Formation Shiatsu" class="btn btn-brun">Réserver un appel</a>
+                    <a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener" class="btn btn-brun">Réserver un échange</a>
+                    <a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan." class="btn btn-contour-brun">Contacter l'école</a>
+                    <p class="contact-line on-light">Par téléphone ou SMS : <a href="tel:+33768928854">07 68 92 88 54</a></p>
                 </div>
             </nav>
         </div>
@@ -1204,9 +1218,11 @@ section { padding: 88px 0; }
                         avec une attention particulière portée à la compréhension de la personne avant la pratique.
                     </p>
                     <div class="hero-actions">
-                        <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Premier échange - Formation Shiatsu Professionnel" class="btn btn-dore">Demander un échange</a>
-                        <a href="#programme" class="btn btn-contour arrow">Voir le programme</a>
+                        <a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener" class="btn btn-dore">Réserver un échange</a>
+                        <a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan%20au%20sujet%20de%20la%20formation%20Shiatsu%20Professionnel." class="btn btn-contour">Contacter l'école</a>
                     </div>
+                    <p class="contact-line">Par téléphone ou SMS : <a href="tel:+33768928854">07 68 92 88 54</a></p>
+                    <p class="contact-line"><a href="#programme">Voir le programme ↓</a></p>
                 </div>
 
                 <dl class="stage-facts">
@@ -1322,10 +1338,11 @@ section { padding: 88px 0; }
                         <h2 class="section-title" id="tarif-titre">Tarif et candidature</h2>
                         <p class="tarif-text">Des modalités de paiement échelonné sont proposées. Les possibilités de financement dépendent de votre situation.</p>
                         <ol class="steps">
-                            <li><strong>Un premier échange de 10 minutes</strong> pour parler de votre projet, de votre expérience et vérifier si la formation correspond à ce que vous recherchez.</li>
+                            <li><strong>Un premier échange de 15 minutes</strong> pour parler de votre projet, de votre expérience et vérifier si la formation correspond à ce que vous recherchez.</li>
                             <li><strong>Un entretien de 45 minutes</strong>, si votre projet s'y prête, pour vous présenter en détail le programme, l'organisation et les modalités.</li>
                         </ol>
-                        <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Premier échange - Formation Shiatsu Professionnel" class="btn btn-brun arrow">Demander un échange sur la formation</a>
+                        <div class="inline-actions"><a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener" class="btn btn-brun">Réserver un échange</a><a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan%20au%20sujet%20de%20la%20formation%20Shiatsu%20Professionnel." class="btn btn-contour-brun">Contacter l'école</a></div>
+                        <p class="contact-line on-light">Par téléphone ou SMS : <a href="tel:+33768928854">07 68 92 88 54</a></p>
                     </div>
                 </div>
             </div>
@@ -1359,11 +1376,13 @@ section { padding: 88px 0; }
         <section class="rejoindre" aria-labelledby="rejoindre-titre">
             <div class="container">
                 <h2 id="rejoindre-titre">Parlons de votre projet</h2>
-                <p>Un premier échange de 10 minutes suffit pour savoir si la formation vous correspond.</p>
+                <p>Un premier échange de 15 minutes suffit pour savoir si la formation vous correspond.</p>
                 <div class="hero-actions">
-                    <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Premier échange - Formation Shiatsu Professionnel" class="btn btn-dore">Demander un échange</a>
-                    <a href="/#formations" class="btn btn-contour arrow">Voir les autres formations</a>
+                    <a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener" class="btn btn-dore">Réserver un échange</a>
+                    <a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan%20au%20sujet%20de%20la%20formation%20Shiatsu%20Professionnel." class="btn btn-contour">Contacter l'école</a>
                 </div>
+                <p class="contact-line">Par téléphone ou SMS : <a href="tel:+33768928854">07 68 92 88 54</a></p>
+                <p class="contact-line"><a href="/#formations">Voir les autres formations</a></p>
             </div>
         </section>
 
@@ -1382,8 +1401,9 @@ section { padding: 88px 0; }
                     <h2>Contact</h2>
                     <ul>
                         <li><a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com">equipe@ecole-shiatsu-guylaine-juan.com</a></li>
-                        <li><a href="tel:+33688720223">06 88 72 02 23</a></li>
-                        <li><a href="sms:+33688720223">Envoyer un SMS</a></li>
+                        <li><a href="tel:+33768928854">07 68 92 88 54</a></li>
+                        <li><a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan.">Envoyer un SMS</a></li>
+                        <li><a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener">Réserver un échange</a></li>
                     </ul>
                 </div>
 
@@ -1392,6 +1412,7 @@ section { padding: 88px 0; }
                     <ul>
                         <li>Champis (Ardèche), près de Valence</li>
                         <li>Séance : 53 €</li>
+                        <li><a href="tel:+33688720223">06 88 72 02 23</a></li>
                         <li><a href="/cabinet-shiatsu-champis/">Découvrir le cabinet →</a></li>
                     </ul>
                 </div>
@@ -1408,7 +1429,7 @@ section { padding: 88px 0; }
             </div>
 
             <div class="footer-bottom">
-                <span>© 2024 Guylaine Juan – École de Shiatsu et MTC – Tous droits réservés</span>
+                <span>© 2026 Guylaine Juan – École de Shiatsu et MTC – Tous droits réservés</span>
                 <a href="/faq/">Questions fréquentes</a>
             </div>
         </div>
