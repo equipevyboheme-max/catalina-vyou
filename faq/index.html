@@ -57,7 +57,7 @@
    "name": "Comment s'inscrire à une formation ?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "L'admission se fait sur sélection, en deux temps. Un premier échange de 10 minutes permet de faire connaissance et de vérifier que votre projet rejoint l'esprit de l'enseignement de Guylaine. Si c'est le cas, un entretien de 45 minutes vous présente l'ensemble du parcours : programme, tarif, organisation et modalités. Pour réserver votre premier échange, écrivez-nous à equipe@ecole-shiatsu-guylaine-juan.com."
+    "text": "L'admission se fait sur sélection, en deux temps. Un premier échange de 15 minutes permet de faire connaissance et de vérifier que votre projet rejoint l'esprit de l'enseignement de Guylaine. Si c'est le cas, un entretien de 45 minutes vous présente l'ensemble du parcours : programme, tarif, organisation et modalités. Pour réserver votre premier échange, réservez directement un créneau en ligne ou envoyez un SMS au 07 68 92 88 54."
    }
   },
   {
@@ -97,7 +97,7 @@
    "name": "Combien coûte le programme Shiatsu Familial ?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Le tarif vous est présenté lors d'un entretien personnalisé. L'admission se fait en deux temps : un premier échange de 10 minutes pour faire connaissance et vérifier que la formation répond à vos attentes, puis, si votre projet s'y prête, un entretien de 45 minutes qui vous présente en détail le programme, le tarif et les modalités. Pour réserver votre premier échange : equipe@ecole-shiatsu-guylaine-juan.com."
+    "text": "Le tarif vous est présenté lors d'un entretien personnalisé. L'admission se fait en deux temps : un premier échange de 15 minutes pour faire connaissance et vérifier que la formation répond à vos attentes, puis, si votre projet s'y prête, un entretien de 45 minutes qui vous présente en détail le programme, le tarif et les modalités. Pour réserver votre premier échange, réservez directement un créneau en ligne ou envoyez un SMS au 07 68 92 88 54."
    }
   },
   {
@@ -145,7 +145,7 @@
    "name": "Combien coûte la formation Shiatsu Professionnel ?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "La formation Shiatsu Professionnel est à 4 500 €, avec des modalités de paiement échelonné. Avant toute inscription, un premier échange de 10 minutes permet de vérifier que la formation répond à vos attentes, puis un entretien de 45 minutes vous présente le programme et les modalités en détail. Pour réserver votre premier échange : equipe@ecole-shiatsu-guylaine-juan.com."
+    "text": "La formation Shiatsu Professionnel est à 4 500 €, avec des modalités de paiement échelonné. Avant toute inscription, un premier échange de 15 minutes permet de vérifier que la formation répond à vos attentes, puis un entretien de 45 minutes vous présente le programme et les modalités en détail. Pour réserver votre premier échange, réservez directement un créneau en ligne ou envoyez un SMS au 07 68 92 88 54."
    }
   },
   {
@@ -185,7 +185,7 @@
    "name": "Combien coûte le programme Leadership Shiatsu ?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Le tarif vous est présenté lors d'un entretien personnalisé. L'admission se fait en deux temps : un premier échange de 10 minutes pour faire connaissance et vérifier que la formation répond à vos attentes, puis, si votre projet s'y prête, un entretien de 45 minutes qui vous présente en détail le programme, le tarif et les modalités. Pour réserver votre premier échange : equipe@ecole-shiatsu-guylaine-juan.com."
+    "text": "Le tarif vous est présenté lors d'un entretien personnalisé. L'admission se fait en deux temps : un premier échange de 15 minutes pour faire connaissance et vérifier que la formation répond à vos attentes, puis, si votre projet s'y prête, un entretien de 45 minutes qui vous présente en détail le programme, le tarif et les modalités. Pour réserver votre premier échange, réservez directement un créneau en ligne ou envoyez un SMS au 07 68 92 88 54."
    }
   },
   {
@@ -360,6 +360,18 @@ section { padding: 88px 0; }
 .btn-contour:hover { background: rgba(253, 251, 248, 0.1); border-color: var(--ivoire); }
 
 .arrow::after { content: "→"; font-family: var(--sans); }
+/* Prise de contact : agenda Calendly + appel / SMS */
+.contact-line { margin-top: 16px; font-size: 0.92rem; color: rgba(253, 251, 248, 0.85); }
+.contact-line a { color: var(--dore); text-decoration: none; font-weight: 500; white-space: nowrap; }
+.contact-line a:hover { text-decoration: underline; }
+.contact-line.on-light { color: var(--texte-doux); }
+.contact-line.on-light a { color: var(--brun); }
+.btn-contour-brun { border-color: var(--brun); color: var(--brun); }
+.btn-contour-brun:hover { background: var(--brun); color: var(--blanc); }
+.drawer-cta .btn + .btn { margin-top: 10px; }
+.drawer-cta .contact-line { margin-top: 12px; text-align: center; }
+.inline-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 8px; }
+
 
 .text-link {
     display: inline-flex;
@@ -748,13 +760,14 @@ section { padding: 88px 0; }
 .temoignages { background: var(--sable); }
 .temoignages-intro { text-align: center; color: var(--texte-doux); margin: 18px auto 48px; max-width: 560px; }
 
-.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.quotes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 1080px) { .quotes { grid-template-columns: repeat(2, 1fr); } }
 
 .quote-card {
     background: var(--blanc);
     border: 1px solid var(--ligne);
     border-radius: 6px;
-    padding: 34px 30px 28px;
+    padding: 32px 26px 26px;
     display: flex;
     flex-direction: column;
 }
@@ -767,6 +780,8 @@ section { padding: 88px 0; }
     margin-bottom: 18px;
 }
 .quote-card blockquote { font-size: 0.98rem; color: var(--texte); flex-grow: 1; }
+
+
 .quote-card figcaption { margin-top: 22px; font-size: 0.88rem; color: var(--texte-doux); }
 .quote-card figcaption strong { color: var(--brun); font-weight: 500; }
 
@@ -919,7 +934,7 @@ section { padding: 88px 0; }
     /* Mise en page des sections */
     section { padding: 64px 0; }
     .formations-head { grid-template-columns: 1fr; gap: 18px; margin-bottom: 32px; }
-    .cards, .quotes { grid-template-columns: 1fr; }
+    .cards { grid-template-columns: 1fr; }
     .stages-grid { grid-template-columns: 1fr; }
     .methode-grid { grid-template-columns: 1fr; gap: 32px; }
     .portrait { max-width: 320px; }
@@ -942,6 +957,7 @@ section { padding: 88px 0; }
     .featured-body { padding: 26px 22px; }
     .card { padding: 28px 24px; }
     .keypoints { grid-template-columns: 1fr; }
+    .quotes { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; gap: 30px; }
 }
 
@@ -1130,7 +1146,9 @@ section { padding: 88px 0; }
                 </ul>
 
                 <div class="drawer-cta">
-                    <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Réserver un appel - Formation Shiatsu" class="btn btn-brun">Réserver un appel</a>
+                    <a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener" class="btn btn-brun">Réserver un échange</a>
+                    <a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan." class="btn btn-contour-brun">Contacter l'école</a>
+                    <p class="contact-line on-light">Par téléphone ou SMS : <a href="tel:+33768928854">07 68 92 88 54</a></p>
                 </div>
             </nav>
         </div>
@@ -1191,7 +1209,7 @@ section { padding: 88px 0; }
                 </details>
                 <details class="faq-item">
                     <summary>Comment s'inscrire à une formation ?</summary>
-                    <p>L'admission se fait sur sélection, en deux temps. Un premier échange de 10 minutes permet de faire connaissance et de vérifier que votre projet rejoint l'esprit de l'enseignement de Guylaine. Si c'est le cas, un entretien de 45 minutes vous présente l'ensemble du parcours : programme, tarif, organisation et modalités. Pour réserver votre premier échange, écrivez-nous à <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com">equipe@ecole-shiatsu-guylaine-juan.com</a>.</p>
+                    <p>L'admission se fait sur sélection, en deux temps. Un premier échange de 15 minutes permet de faire connaissance et de vérifier que votre projet rejoint l'esprit de l'enseignement de Guylaine. Si c'est le cas, un entretien de 45 minutes vous présente l'ensemble du parcours : programme, tarif, organisation et modalités. Pour réserver votre premier échange, réservez directement un créneau <a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener">en ligne</a> ou envoyez un SMS au <a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan.">07 68 92 88 54</a>.</p>
                 </details>
                 <h2 class="faq-cat" id="faq-familial">Shiatsu Familial</h2>
                 <details class="faq-item">
@@ -1212,7 +1230,7 @@ section { padding: 88px 0; }
                 </details>
                 <details class="faq-item">
                     <summary>Combien coûte le programme Shiatsu Familial ?</summary>
-                    <p>Le tarif vous est présenté lors d'un entretien personnalisé. L'admission se fait en deux temps : un premier échange de 10 minutes pour faire connaissance et vérifier que la formation répond à vos attentes, puis, si votre projet s'y prête, un entretien de 45 minutes qui vous présente en détail le programme, le tarif et les modalités. Pour réserver votre premier échange : <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com">equipe@ecole-shiatsu-guylaine-juan.com</a>.</p>
+                    <p>Le tarif vous est présenté lors d'un entretien personnalisé. L'admission se fait en deux temps : un premier échange de 15 minutes pour faire connaissance et vérifier que la formation répond à vos attentes, puis, si votre projet s'y prête, un entretien de 45 minutes qui vous présente en détail le programme, le tarif et les modalités. Pour réserver votre premier échange, réservez directement un créneau <a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener">en ligne</a> ou envoyez un SMS au <a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan.">07 68 92 88 54</a>.</p>
                 </details>
                 <details class="faq-item">
                     <summary>Le Shiatsu Familial peut-il remplacer un médecin ?</summary>
@@ -1237,7 +1255,7 @@ section { padding: 88px 0; }
                 </details>
                 <details class="faq-item">
                     <summary>Combien coûte la formation Shiatsu Professionnel ?</summary>
-                    <p>La formation Shiatsu Professionnel est à 4 500 €, avec des modalités de paiement échelonné. Avant toute inscription, un premier échange de 10 minutes permet de vérifier que la formation répond à vos attentes, puis un entretien de 45 minutes vous présente le programme et les modalités en détail. Pour réserver votre premier échange : <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com">equipe@ecole-shiatsu-guylaine-juan.com</a>.</p>
+                    <p>La formation Shiatsu Professionnel est à 4 500 €, avec des modalités de paiement échelonné. Avant toute inscription, un premier échange de 15 minutes permet de vérifier que la formation répond à vos attentes, puis un entretien de 45 minutes vous présente le programme et les modalités en détail. Pour réserver votre premier échange, réservez directement un créneau <a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener">en ligne</a> ou envoyez un SMS au <a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan.">07 68 92 88 54</a>.</p>
                 </details>
                 <details class="faq-item">
                     <summary>La formation Shiatsu Professionnel est-elle finançable ?</summary>
@@ -1258,7 +1276,7 @@ section { padding: 88px 0; }
                 </details>
                 <details class="faq-item">
                     <summary>Combien coûte le programme Leadership Shiatsu ?</summary>
-                    <p>Le tarif vous est présenté lors d'un entretien personnalisé. L'admission se fait en deux temps : un premier échange de 10 minutes pour faire connaissance et vérifier que la formation répond à vos attentes, puis, si votre projet s'y prête, un entretien de 45 minutes qui vous présente en détail le programme, le tarif et les modalités. Pour réserver votre premier échange : <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com">equipe@ecole-shiatsu-guylaine-juan.com</a>.</p>
+                    <p>Le tarif vous est présenté lors d'un entretien personnalisé. L'admission se fait en deux temps : un premier échange de 15 minutes pour faire connaissance et vérifier que la formation répond à vos attentes, puis, si votre projet s'y prête, un entretien de 45 minutes qui vous présente en détail le programme, le tarif et les modalités. Pour réserver votre premier échange, réservez directement un créneau <a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener">en ligne</a> ou envoyez un SMS au <a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan.">07 68 92 88 54</a>.</p>
                 </details>
                 <details class="faq-item">
                     <summary>Pourquoi travailler le leadership par le corps ?</summary>
@@ -1292,11 +1310,12 @@ section { padding: 88px 0; }
         <section class="rejoindre" aria-labelledby="rejoindre-titre">
             <div class="container">
                 <h2 id="rejoindre-titre">Une autre question ?</h2>
-                <p>Écrivez-nous ou réservez un premier échange de 10 minutes pour parler de votre projet.</p>
+                <p>Réservez un premier échange de 15 minutes, ou contactez l'école par SMS, pour parler de votre projet.</p>
                 <div class="hero-actions">
-                    <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com?subject=Premier échange - Formation Shiatsu" class="btn btn-dore">Réserver mon premier échange</a>
-                    <a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com" class="btn btn-contour arrow">Nous écrire</a>
+                    <a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener" class="btn btn-dore">Réserver un échange</a>
+                    <a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan." class="btn btn-contour">Contacter l'école</a>
                 </div>
+                <p class="contact-line">Par téléphone ou SMS : <a href="tel:+33768928854">07 68 92 88 54</a></p>
             </div>
         </section>
 
@@ -1315,8 +1334,9 @@ section { padding: 88px 0; }
                     <h2>Contact</h2>
                     <ul>
                         <li><a href="mailto:equipe@ecole-shiatsu-guylaine-juan.com">equipe@ecole-shiatsu-guylaine-juan.com</a></li>
-                        <li><a href="tel:+33688720223">06 88 72 02 23</a></li>
-                        <li><a href="sms:+33688720223">Envoyer un SMS</a></li>
+                        <li><a href="tel:+33768928854">07 68 92 88 54</a></li>
+                        <li><a href="sms:+33768928854?&amp;body=Bonjour%2C%20j%27aimerais%20contacter%20l%27%C3%89cole%20de%20Shiatsu%20Guylaine%20Juan.">Envoyer un SMS</a></li>
+                        <li><a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener">Réserver un échange</a></li>
                     </ul>
                 </div>
 
@@ -1325,6 +1345,7 @@ section { padding: 88px 0; }
                     <ul>
                         <li>Champis (Ardèche), près de Valence</li>
                         <li>Séance : 53 €</li>
+                        <li><a href="tel:+33688720223">06 88 72 02 23</a></li>
                         <li><a href="/cabinet-shiatsu-champis/">Découvrir le cabinet →</a></li>
                     </ul>
                 </div>
