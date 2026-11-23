@@ -903,11 +903,25 @@ section { padding: 88px 0; }
 /* =========================================================
    PAGE CABINET
    ========================================================= */
-.cab-ecole-band { background: var(--sable); padding: 22px 0; border-bottom: 1px solid var(--ligne); }
-.cab-ecole-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px 32px; flex-wrap: wrap; }
-.cab-ecole-inner p { color: var(--texte-doux); max-width: 680px; }
-.cab-ecole-inner strong { color: var(--brun); font-weight: 500; }
-.cab-ecole-links { display: flex; gap: 22px; flex-wrap: wrap; }
+/* En-tête en deux parties : le cabinet à gauche, l'école à droite */
+.cab-split { display: grid; grid-template-columns: 1fr 1fr; }
+.cab-half { position: relative; overflow: hidden; padding: 44px 0 64px; color: var(--ivoire); }
+.cab-half-cabinet { background: linear-gradient(135deg, #4E2A1F 0%, #3A1F16 100%); }
+.cab-half-ecole { background: var(--ocre); display: flex; align-items: flex-end; }
+.cab-half-inner { position: relative; max-width: 600px; padding: 0 48px; }
+.cab-half-cabinet .cab-half-inner { margin-left: auto; padding-left: 24px; }
+.cab-half-ecole .cab-half-inner { padding-right: 24px; }
+.cab-half .breadcrumb { margin-bottom: 30px; }
+.cab-half-cabinet .eyebrow { color: var(--dore); }
+.cab-half-ecole .eyebrow { color: var(--sable); }
+.cab-half-title { font-family: var(--serif); font-size: clamp(2rem, 3.2vw, 2.7rem); line-height: 1.15; color: var(--ivoire); margin: 14px 0 18px; }
+.cab-half-lead { font-size: 1.05rem; font-weight: 300; color: rgba(253, 251, 248, 0.92); }
+.cab-half .hero-actions { margin-top: 28px; }
+.cab-half-ecole .contact-line { color: var(--ivoire); }
+.cab-half-ecole .contact-line a { color: var(--ivoire); text-decoration: underline; text-underline-offset: 3px; }
+.cab-half-ecole .hero-ornament { opacity: 0.12; right: -160px; width: 420px; height: 420px; }
+.btn-ivoire { background: var(--ivoire); color: var(--brun); }
+.btn-ivoire:hover { background: var(--sable); }
 
 .cab-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
 .cab-grid .section-title { margin: 8px 0 26px; }
@@ -949,9 +963,15 @@ section { padding: 88px 0; }
 @media (max-width: 960px) {
     .cab-grid { grid-template-columns: 1fr; gap: 32px; }
 }
+@media (max-width: 960px) {
+    .cab-split { grid-template-columns: 1fr; }
+    .cab-half { padding: 40px 0 52px; }
+    .cab-half-inner, .cab-half-cabinet .cab-half-inner, .cab-half-ecole .cab-half-inner { max-width: 1120px; margin: 0; padding: 0 24px; }
+}
 @media (max-width: 600px) {
     .cab-card, .cab-address { padding: 28px 22px; }
-    .cab-ecole-links { gap: 16px; }
+    .cab-half { padding: 32px 0 44px; }
+    .cab-half-inner, .cab-half-cabinet .cab-half-inner, .cab-half-ecole .cab-half-inner { padding: 0 16px; }
 }
 
 /* =========================================================
@@ -1094,28 +1114,20 @@ section { padding: 88px 0; }
 
     <main id="contenu-principal">
 
-        <!-- ===== EN-TÊTE DU CABINET ===== -->
-        <section class="hero stage-hero" aria-labelledby="cab-titre">
-            <svg class="hero-ornament" viewBox="0 0 200 200" aria-hidden="true">
-                <g fill="none" stroke="#D4A373" stroke-width="0.6">
-                    <circle cx="100" cy="100" r="96"/>
-                    <circle cx="100" cy="100" r="78"/>
-                    <circle cx="100" cy="100" r="60"/>
-                    <path d="M100 4 C 150 50, 50 150, 100 196"/>
-                </g>
-            </svg>
+        <!-- ===== EN-TÊTE EN DEUX PARTIES : LE CABINET (gauche) / L'ÉCOLE (droite) ===== -->
+        <div class="cab-split">
 
-            <div class="container">
-                <nav class="breadcrumb" aria-label="Fil d'Ariane">
-                    <a href="/">Accueil</a> <span aria-hidden="true">/</span> <a href="/#methode">L'École</a> <span aria-hidden="true">/</span> <span aria-current="page">Cabinet à Champis</span>
-                </nav>
-
-                <div class="hero-inner stage-hero-inner">
-                    <p class="eyebrow">Séances individuelles · Champis · Ardèche</p>
-                    <h1 id="cab-titre" class="stage-title">Cabinet Shiatsu à Champis en Ardèche</h1>
-                    <p class="hero-lead">
-                        Guylaine Juan, praticienne en Shiatsu &amp; Médecine Traditionnelle Chinoise
-                        depuis plus de 20 ans, vous reçoit sur rendez-vous dans son cabinet à Champis.
+            <!-- Le cabinet -->
+            <section class="cab-half cab-half-cabinet" aria-labelledby="cab-titre">
+                <div class="cab-half-inner">
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                        <a href="/">Accueil</a> <span aria-hidden="true">/</span> <a href="/#methode">L'École</a> <span aria-hidden="true">/</span> <span aria-current="page">Cabinet à Champis</span>
+                    </nav>
+                    <p class="eyebrow">Le cabinet · Champis · Ardèche</p>
+                    <h1 id="cab-titre" class="cab-half-title">Cabinet Shiatsu à Champis en Ardèche</h1>
+                    <p class="cab-half-lead">
+                        Guylaine Juan vous reçoit en séance individuelle. Praticienne en Shiatsu &amp; Médecine
+                        Traditionnelle Chinoise depuis plus de 20 ans, sur rendez-vous à Champis.
                     </p>
                     <div class="hero-actions">
                         <a href="tel:+33688720223" class="btn btn-dore">Prendre rendez-vous</a>
@@ -1123,19 +1135,34 @@ section { padding: 88px 0; }
                     </div>
                     <p class="contact-line">Cabinet : <a href="tel:+33688720223">06 88 72 02 23</a> · 53 € la séance</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- ===== ACCÈS À L'ÉCOLE ===== -->
-        <section class="cab-ecole-band" aria-label="L'École de Shiatsu">
-            <div class="container cab-ecole-inner">
-                <p><strong>Vous souhaitez apprendre le Shiatsu ?</strong> Guylaine Juan a fondé l'École de Shiatsu &amp; Médecine Traditionnelle Chinoise : formations à distance et week-ends de pratique.</p>
-                <div class="cab-ecole-links">
-                    <a href="/#formations" class="text-link arrow">Les formations</a>
-                    <a href="/#stages" class="text-link arrow">Les prochains stages</a>
+            <!-- L'école -->
+            <section class="cab-half cab-half-ecole" aria-labelledby="cab-ecole-titre">
+                <svg class="hero-ornament" viewBox="0 0 200 200" aria-hidden="true">
+                    <g fill="none" stroke="#FDFBF8" stroke-width="0.6">
+                        <circle cx="100" cy="100" r="96"/>
+                        <circle cx="100" cy="100" r="78"/>
+                        <circle cx="100" cy="100" r="60"/>
+                        <path d="M100 4 C 150 50, 50 150, 100 196"/>
+                    </g>
+                </svg>
+                <div class="cab-half-inner">
+                    <p class="eyebrow">L'École · Formations et stages</p>
+                    <h2 id="cab-ecole-titre" class="cab-half-title">Apprenez le Shiatsu avec Guylaine</h2>
+                    <p class="cab-half-lead">
+                        Guylaine Juan a fondé l'École de Shiatsu &amp; Médecine Traditionnelle Chinoise :
+                        formations à distance et week-ends de pratique, autour du Bilan avant le Geste.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="/#formations" class="btn btn-ivoire">Découvrir les formations</a>
+                        <a href="/#stages" class="btn btn-contour">Prochains stages</a>
+                    </div>
+                    <p class="contact-line">Premier échange de 15 min : <a href="https://calendly.com/team-ecole-shiatsu/30min" target="_blank" rel="noopener">Réserver un échange</a> · <a href="tel:+33768928854">07 68 92 88 54</a></p>
                 </div>
-            </div>
-        </section>
+            </section>
+
+        </div>
 
         <!-- ===== PRÉSENTATION ===== -->
         <section aria-labelledby="pres-titre">
