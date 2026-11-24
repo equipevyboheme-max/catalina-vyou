@@ -780,6 +780,36 @@ section { padding: 88px 0; }
     </style>
 </head>
 <body>
+    <!-- ===== BANDEAU BLACK FRIDAY (24 au 30 novembre 2026) : à supprimer après l'offre ===== -->
+<style>
+.bf-banner { display: flex; align-items: center; justify-content: center; gap: 18px 24px; flex-wrap: wrap; text-align: center; background: #B23A2E; color: #FDFBF8; padding: 22px 20px; text-decoration: none; font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; position: relative; z-index: 1001; }
+.bf-banner:hover .bf-btn { background: #F5EDE3; }
+.bf-tag { background: #FDFBF8; color: #B23A2E; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.2em; padding: 6px 14px; border-radius: 999px; }
+.bf-title { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; line-height: 1.2; }
+.bf-sub { display: block; margin-top: 4px; font-size: 0.95rem; color: #FAECE7; }
+.bf-btn { background: #FDFBF8; color: #4E2A1F; font-size: 0.95rem; font-weight: 500; padding: 11px 24px; border-radius: 999px; transition: background 0.2s ease; }
+@media (max-width: 600px) {
+    .bf-banner { padding: 18px 16px; gap: 12px; }
+    .bf-title { font-size: 1.3rem; }
+    .bf-sub { font-size: 0.88rem; }
+}
+</style>
+<a class="bf-banner" id="bf-banner" href="https://sandrine-elichabe.systeme.io/a01eccd4" target="_blank" rel="noopener">
+    <span class="bf-tag">BLACK FRIDAY</span>
+    <span>
+        <span class="bf-title">–10 % sur nos deux stages de Shiatsu</span>
+        <span class="bf-sub">441 € au lieu de 490 € · jusqu'au 30 novembre inclus</span>
+    </span>
+    <span class="bf-btn">Découvrir l'offre →</span>
+</a>
+<script>
+/* Le bandeau disparaît tout seul à partir du 1er décembre 2026 */
+if (new Date() >= new Date('2026-12-01T00:00:00+01:00')) {
+    var bf = document.getElementById('bf-banner');
+    if (bf) { bf.remove(); }
+}
+</script>
+<!-- ===== FIN DU BANDEAU BLACK FRIDAY ===== -->
     <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
 
     <!-- ===== EN-TÊTE ===== -->
