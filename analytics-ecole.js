@@ -109,7 +109,7 @@
     banner.appendChild(element('strong','Vos préférences de cookies'));
     banner.appendChild(element('p','Avec votre accord, Google Analytics mesure les visites de certaines pages de formation de notre site. Vous pouvez refuser sans conséquence sur votre navigation. Votre choix est mémorisé pendant 180 jours et peut être modifié à tout moment. Aucune mesure publicitaire n’est activée par ce dispositif.'));
     if (!eligible) banner.appendChild(element('p','La mesure Google Analytics est désactivée sur cette page.'));
-    const p=element('p'); const link=element('a','Informations sur le traitement par Google'); link.href='https://policies.google.com/technologies/partner-sites?hl=fr'; link.target='_blank';link.rel='noopener noreferrer';p.appendChild(link);banner.appendChild(p);
+    const p=element('p'); const policy=element('a','Politique de confidentialité'); policy.href='/politique-confidentialite/'; p.appendChild(policy); p.appendChild(document.createTextNode(' · ')); const link=element('a','Traitement par Google'); link.href='https://policies.google.com/technologies/partner-sites?hl=fr'; link.target='_blank';link.rel='noopener noreferrer';p.appendChild(link);banner.appendChild(p);
     const actions=element('div');actions.className='ecole-stats-actions';
     for (const [label,value] of [['Tout refuser','no'],['Tout accepter','yes']]) {
       const b=element('button',label);b.type='button';b.addEventListener('click',()=>choose(value));actions.appendChild(b);
